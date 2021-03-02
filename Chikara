@@ -1,0 +1,13 @@
+while wait() do 
+	for k,v in pairs(game:GetService("Workspace").MouseIgnore:GetDescendants()) do
+		pcall(function()
+			if v.Parent.Name == 'ClickBox' and v:IsA("ClickDetector") then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+				wait(1)
+				fireclickdetector(v)
+				wait(4)
+
+			end
+		end)
+	end
+end
