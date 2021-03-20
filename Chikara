@@ -1,9 +1,15 @@
+game:GetService('RunService').Stepped:connect(function()
+	pcall(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+	end)
+end)
+
 
 
 for i = 1,10 do
 	for k,v in pairs(game:GetService("Workspace").MouseIgnore:GetDescendants()) do
 		if v:IsA("ClickDetector")  and v.Parent.Name == 'ClickBox'  then
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame * CFrame.new(0,-8,0)
 			wait(1)
 			fireclickdetector(v)
 			wait(4)
