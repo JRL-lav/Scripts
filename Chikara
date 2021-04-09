@@ -4,7 +4,7 @@ game:GetService('RunService').Stepped:connect(function()
 	end)
 end)
 
-wait(3)
+wait(5)
 
 for i = 1,10 do
 	for k,v in pairs(game:GetService("Workspace").MouseIgnore:GetDescendants()) do
