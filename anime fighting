@@ -18,20 +18,86 @@ for i,v in next,game:GetService("Workspace").MouseIgnore:GetDescendants() do
 		table.insert(all,v.Value)
 	end 
 end
-if table.getn(all) ~= 30 then
-	repeat wait()
-		table.clear(all)
+if game.PlaceId == 4042427666 then -- dem 1
+	if table.getn(all) ~= 30 then
+		repeat wait()
+			table.clear(all)
 
-		for i,v in next,game:GetService("Workspace").MouseIgnore:GetDescendants() do
-			if  v.Name == 'Requires' and v.Parent.Name == "Strength" or v.Name == 'Requires' and v.Parent.Name == "Speed" or v.Name == 'Requires' and v.Parent.Name == "Agility" or  v.Name == 'Requires' and v.Parent.Name == "Chakra" or  v.Name == 'Requires' and v.Parent.Name == "Durability" then
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame 
-				wait(0.01)
-				table.insert(all,v.Value)
+			for i,v in next,game:GetService("Workspace").MouseIgnore:GetDescendants() do
+				if  v.Name == 'Requires' and v.Parent.Name == "Strength" or v.Name == 'Requires' and v.Parent.Name == "Speed" or v.Name == 'Requires' and v.Parent.Name == "Agility" or  v.Name == 'Requires' and v.Parent.Name == "Chakra" or  v.Name == 'Requires' and v.Parent.Name == "Durability" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame 
+					wait(0.01)
+					table.insert(all,v.Value)
+				end
 			end
-		end
-		print(table.getn(all))
+			print(table.getn(all))
 
-	until table.getn(all) == 30
+		until table.getn(all) == 30
+	end
+elseif game.PlaceId == 5113678354 then-- dem 2
+	if table.getn(all) ~= 12 then
+		repeat wait()
+			table.clear(all)
+
+			for i,v in next,game:GetService("Workspace").MouseIgnore:GetDescendants() do
+				if  v.Name == 'Requires' and v.Parent.Name == "Strength" or v.Name == 'Requires' and v.Parent.Name == "Speed" or v.Name == 'Requires' and v.Parent.Name == "Agility" or  v.Name == 'Requires' and v.Parent.Name == "Chakra" or  v.Name == 'Requires' and v.Parent.Name == "Durability" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame 
+					wait(0.01)
+					table.insert(all,v.Value)
+				end
+			end
+			print(table.getn(all))
+
+		until table.getn(all) == 12
+	end
+elseif game.PlaceId == 5113680396 then-- dem 3
+	if table.getn(all) ~= 15 then
+		repeat wait()
+			table.clear(all)
+
+			for i,v in next,game:GetService("Workspace").MouseIgnore:GetDescendants() do
+				if  v.Name == 'Requires' and v.Parent.Name == "Strength" or v.Name == 'Requires' and v.Parent.Name == "Speed" or v.Name == 'Requires' and v.Parent.Name == "Agility" or  v.Name == 'Requires' and v.Parent.Name == "Chakra" or  v.Name == 'Requires' and v.Parent.Name == "Durability" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame 
+					wait(0.01)
+					table.insert(all,v.Value)
+				end
+			end
+			print(table.getn(all))
+
+		until table.getn(all) == 15
+	end
+elseif game.PlaceId == 5445525505 then-- dem 4
+	if table.getn(all) ~= 9 then
+		repeat wait()
+			table.clear(all)
+
+			for i,v in next,game:GetService("Workspace").MouseIgnore:GetDescendants() do
+				if  v.Name == 'Requires' and v.Parent.Name == "Strength" or v.Name == 'Requires' and v.Parent.Name == "Speed" or v.Name == 'Requires' and v.Parent.Name == "Agility" or  v.Name == 'Requires' and v.Parent.Name == "Chakra" or  v.Name == 'Requires' and v.Parent.Name == "Durability" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame 
+					wait(0.01)
+					table.insert(all,v.Value)
+				end
+			end
+			print(table.getn(all))
+
+		until table.getn(all) == 9
+	end
+elseif game.PlaceId == 6479720355 then-- dem 5
+	if table.getn(all) ~= 9 then
+		repeat wait()
+			table.clear(all)
+
+			for i,v in next,game:GetService("Workspace").MouseIgnore:GetDescendants() do
+				if  v.Name == 'Requires' and v.Parent.Name == "Strength" or v.Name == 'Requires' and v.Parent.Name == "Speed" or v.Name == 'Requires' and v.Parent.Name == "Agility" or  v.Name == 'Requires' and v.Parent.Name == "Chakra" or  v.Name == 'Requires' and v.Parent.Name == "Durability" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame 
+					wait(0.5)
+					table.insert(all,v.Value)
+				end
+			end
+			print(table.getn(all))
+
+		until table.getn(all) == 9
+	end
 end
 wait(1)
 
@@ -207,7 +273,6 @@ spawn(function()
 		end
 	end
 end)
-
 
 
 
