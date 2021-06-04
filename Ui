@@ -1633,8 +1633,8 @@ function DiscordLib:Window(text)
 		ServerIco.Size = UDim2.new(0, 26, 0, 26)
 		ServerIco.Image = ""
 		ServerIco.Transparency = 1
-		
-		
+
+
 		ServerWhiteFrame.Name = "ServerWhiteFrame"
 		ServerWhiteFrame.Parent = Server
 		ServerWhiteFrame.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -1647,8 +1647,8 @@ function DiscordLib:Window(text)
 		ServerWhiteFrameCorner.Name = "ServerWhiteFrameCorner"
 		ServerWhiteFrameCorner.Parent = ServerWhiteFrame
 		ServersHold.CanvasSize = UDim2.new(0, 0, 0, ServersHoldLayout.AbsoluteContentSize.Y)
-		
-		
+
+
 		local ServerFrame = Instance.new("Frame")
 		local ServerFrame1 = Instance.new("Frame")
 		local ServerFrame2 = Instance.new("Frame")
@@ -1683,14 +1683,14 @@ function DiscordLib:Window(text)
 		ServerFrame1.BorderSizePixel = 0
 		ServerFrame1.Position = UDim2.new(0, 0, 0.972290039, 0)
 		ServerFrame1.Size = UDim2.new(0, 12, 0, 10)
-		
+
 		ServerFrame2.Name = "ServerFrame2"
 		ServerFrame2.Parent = ServerFrame
 		ServerFrame2.BackgroundColor3 = Color3.fromRGB(47, 49, 54)
 		ServerFrame2.BorderSizePixel = 0
 		ServerFrame2.Position = UDim2.new(0.980295539, 0, 0.972290039, 0)
 		ServerFrame2.Size = UDim2.new(0, 12, 0, 9)
-		
+
 
 		ServerTitleFrame.Name = "ServerTitleFrame"
 		ServerTitleFrame.Parent = ServerFrame
@@ -1699,7 +1699,7 @@ function DiscordLib:Window(text)
 		ServerTitleFrame.BorderSizePixel = 0
 		ServerTitleFrame.Position = UDim2.new(-0.0010054264, 0, -0.000900391256, 0)
 		ServerTitleFrame.Size = UDim2.new(0, 180, 0, 40)
-		
+
 
 		ServerTitle.Name = "ServerTitle"
 		ServerTitle.Parent = ServerTitleFrame
@@ -1713,7 +1713,7 @@ function DiscordLib:Window(text)
 		ServerTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
 		ServerTitle.TextSize = 15.000
 		ServerTitle.TextXAlignment = Enum.TextXAlignment.Left
-		
+
 		GlowFrame.Name = "GlowFrame"
 		GlowFrame.Parent = ServerFrame
 		GlowFrame.BackgroundColor3 = Color3.fromRGB(47, 49, 54)
@@ -1734,7 +1734,7 @@ function DiscordLib:Window(text)
 		Glow.ImageColor3 = Color3.fromRGB(15, 15, 15)
 		Glow.ScaleType = Enum.ScaleType.Slice
 		Glow.SliceCenter = Rect.new(20, 20, 280, 280)
-		
+
 
 		ServerContentFrame.Name = "ServerContentFrame"
 		ServerContentFrame.Parent = ServerFrame
@@ -1743,14 +1743,14 @@ function DiscordLib:Window(text)
 		ServerContentFrame.BorderSizePixel = 0
 		ServerContentFrame.Position = UDim2.new(-0.0010054264, 0, 0.106338218, 0)
 		ServerContentFrame.Size = UDim2.new(0, 180, 0, 333)
-		
+
 		ChannelTitleFrame.Name = "ChannelTitleFrame"
 		ChannelTitleFrame.Parent = ServerFrame
 		ChannelTitleFrame.BackgroundColor3 = Color3.fromRGB(54, 57, 63)
 		ChannelTitleFrame.BorderSizePixel = 0
 		ChannelTitleFrame.Position = UDim2.new(0.294561088, 0, -0.000900391256, 0)
 		ChannelTitleFrame.Size = UDim2.new(0, 489, 0, 40)
-		
+
 
 		Hashtag.Name = "Hashtag"
 		Hashtag.Parent = ChannelTitleFrame
@@ -1776,8 +1776,8 @@ function DiscordLib:Window(text)
 		ChannelTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
 		ChannelTitle.TextSize = 15.000
 		ChannelTitle.TextXAlignment = Enum.TextXAlignment.Left
-		
-		
+
+
 
 		ChannelContentFrame.Name = "ChannelContentFrame"
 		ChannelContentFrame.Parent = ServerFrame
@@ -1786,9 +1786,9 @@ function DiscordLib:Window(text)
 		ChannelContentFrame.ClipsDescendants = true
 		ChannelContentFrame.Position = UDim2.new(0.294561088, 0, 0.106338218, 0)
 		ChannelContentFrame.Size = UDim2.new(0, 489, 0, 333)
-		
-		
-		
+
+
+
 		GlowChannel.Name = "GlowChannel"
 		GlowChannel.Parent = ChannelContentFrame
 		GlowChannel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1831,10 +1831,10 @@ function DiscordLib:Window(text)
 		ServerChannelHolder.MouseLeave:Connect(function()
 			ServerChannelHolder.ScrollBarImageTransparency = 1
 		end)
-		
-		
-		
-		
+
+
+
+
 
 		if img == "" then
 			Server.Text = string.sub(text, 1, 1)
@@ -2026,7 +2026,7 @@ function DiscordLib:Window(text)
 				ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 			end
 			function ChannelContent:Toggle(text,default,callback)
-				local toggled = false
+				local toggled = default
 				local Toggle = Instance.new("TextButton")
 				local ToggleTitle = Instance.new("TextLabel")
 				local ToggleFrame = Instance.new("Frame")
@@ -2046,7 +2046,6 @@ function DiscordLib:Window(text)
 				Toggle.Text = ""
 				Toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
 				Toggle.TextSize = 14.000
-				Toggle.Transparency = 1
 
 				ToggleTitle.Name = "ToggleTitle"
 				ToggleTitle.Parent = Toggle
@@ -2086,11 +2085,35 @@ function DiscordLib:Window(text)
 				Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 				Icon.BackgroundTransparency = 1.000
 				Icon.BorderColor3 = Color3.fromRGB(27, 42, 53)
-				Icon.Position = UDim2.new(0, 8, 0, 8)
+				Icon.Position = UDim2.new(0, 7.5, 0, 7.5)
 				Icon.Size = UDim2.new(0, 13, 0, 13)
 				Icon.Image = "http://www.roblox.com/asset/?id=6035047409"
 				Icon.ImageColor3 = Color3.fromRGB(114, 118, 125)
-
+				if default then
+					TweenService:Create(
+						Icon,
+						TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+						{ImageColor3 = Color3.fromRGB(67,181,129)}
+					):Play()
+					TweenService:Create(
+						ToggleFrame,
+						TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+						{BackgroundColor3 = Color3.fromRGB(67,181,129)}
+					):Play()
+					ToggleFrameCircle:TweenPosition(UDim2.new(0.655, -5, 0.133000001, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
+					TweenService:Create(
+						Icon,
+						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+						{ImageTransparency = 1}
+					):Play()
+					Icon.Image = "http://www.roblox.com/asset/?id=6023426926"
+					wait(.1)
+					TweenService:Create(
+						Icon,
+						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+						{ImageTransparency = 0}
+					):Play()
+				end
 				Toggle.MouseButton1Click:Connect(function()
 					if toggled == false then
 						TweenService:Create(
@@ -2147,6 +2170,7 @@ function DiscordLib:Window(text)
 
 				ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 			end
+
 			function ChannelContent:Slider(text, min, max, start, callback)
 				local SliderFunc = {}
 				local dragging = false
@@ -3086,7 +3110,7 @@ function DiscordLib:Window(text)
 						end
 					end
 				end)
-		
+
 				ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 			end
 
@@ -3097,4 +3121,5 @@ function DiscordLib:Window(text)
 	end
 	return ServerHold
 end
+
 return DiscordLib
