@@ -2046,6 +2046,7 @@ function DiscordLib:Window(text)
 				Toggle.Text = ""
 				Toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
 				Toggle.TextSize = 14.000
+				Toggle.Transparency = 1
 
 				ToggleTitle.Name = "ToggleTitle"
 				ToggleTitle.Parent = Toggle
