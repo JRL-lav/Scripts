@@ -86,12 +86,6 @@ wait(.2)
 end)
 
 
-for i,v in pairs(game:GetService("Workspace").Worlds:GetDescendants()) do
-	if v.Name == "Beacon" then
-		
-	end
-end
-
 
 Page2.Button({
 	Text = "DBZ",
