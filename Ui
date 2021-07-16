@@ -2097,7 +2097,7 @@ function DiscordLib:Window(text)
 				local ToggleLibrary2 = {}
 				local ToggleLibrary = {}
 
-				function ToggleLibrary:SetText(Value)
+				function ToggleLibrary2:SetText(Value)
 					ToggleTitle.Text = Value
 				end
 				
