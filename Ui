@@ -2096,6 +2096,10 @@ function DiscordLib:Window(text)
 				Icon.ImageColor3 = Color3.fromRGB(114, 118, 125)
 				local ToggleLibrary = {}
 
+				function ToggleLibrary:SetText(Value)
+					ToggleTitle.Text = Value
+				end
+				
 				function ToggleLibrary:SetState(Value)
 					toggled = Value
 					if toggled then
