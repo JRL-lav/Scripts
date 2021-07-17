@@ -3459,29 +3459,4 @@ function DiscordLib:Window(text)
 	end
 	return ServerHold
 end
-local win = DiscordLib:Window("CloudWare")
-local serv = win:Server("Shindo", "")
-local Main = serv:Channel("Main")
-
-
-local Table = {
-    ["Defeat Bosses"] = true,
-    ["Defeat NPCs"] = true,
-    ["Find Cat"] = false,
-	["Clean Office"] = false,
-	["Deliver Envolope"] = false,
-	["Clean Graffiti"] = false,
-	["Deliver Groceries"] = false
-
-}
-
-Main:MultiDropdown("Select Quests",Table,function(list,bool)
-    Table[list] = bool
-end)
-Main:Toggle("Auto-Quests",false,function(bool)
-	AutoFarm = bool
-end)
-
-Main:Toggle("Auto-Quests",false,function(bool)
-	AutoFarm = bool
-end)
+return DiscordLib
