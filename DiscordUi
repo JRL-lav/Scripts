@@ -2257,9 +2257,9 @@ function DiscordLib:Window(text)
 				Dropdown.Name = "Dropdown"
 				Dropdown.Parent = ChannelHolder
 				Dropdown.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-				Dropdown.BackgroundTransparency = 1.000
+				Dropdown.BackgroundTransparency = 1
 				Dropdown.Position = UDim2.new(0.0796874985, 0, 0.445175439, 0)
-				Dropdown.Size = UDim2.new(0, 403, 0, 73)
+				Dropdown.Size = UDim2.new(0, 403, 0, 50)
 
 				DropdownTitle.Name = "DropdownTitle"
 				DropdownTitle.Parent = Dropdown
@@ -2274,10 +2274,9 @@ function DiscordLib:Window(text)
 				DropdownTitle.TextXAlignment = Enum.TextXAlignment.Left
 
 				DropdownFrameOutline.Name = "DropdownFrameOutline"
-				DropdownFrameOutline.Parent = DropdownTitle
-				DropdownFrameOutline.AnchorPoint = Vector2.new(0.5, 0.5)
+				DropdownFrameOutline.Parent = Dropdown
 				DropdownFrameOutline.BackgroundColor3 = Color3.fromRGB(37, 40, 43)
-				DropdownFrameOutline.Position = UDim2.new(0.988442957, 0, 1.6197437, 0)
+				DropdownFrameOutline.Position = UDim2.new(0, 3.5, 0, 10)
 				DropdownFrameOutline.Size = UDim2.new(0, 396, 0, 36)
 
 				DropdownFrameOutlineCorner.CornerRadius = UDim.new(0, 3)
@@ -2285,10 +2284,10 @@ function DiscordLib:Window(text)
 				DropdownFrameOutlineCorner.Parent = DropdownFrameOutline
 
 				DropdownFrame.Name = "DropdownFrame"
-				DropdownFrame.Parent = DropdownTitle
+				DropdownFrame.Parent = Dropdown
 				DropdownFrame.BackgroundColor3 = Color3.fromRGB(48, 51, 57)
 				DropdownFrame.ClipsDescendants = true
-				DropdownFrame.Position = UDim2.new(0.00999999978, 0, 1.06638527, 0)
+				DropdownFrame.Position = UDim2.new(0, 5.5, 0, 12)
 				DropdownFrame.Selectable = true
 				DropdownFrame.Size = UDim2.new(0, 392, 0, 32)
 
@@ -2336,9 +2335,9 @@ function DiscordLib:Window(text)
 				local DropItemHolderLayout = Instance.new("UIListLayout")
 
 				DropdownFrameMainOutline.Name = "DropdownFrameMainOutline"
-				DropdownFrameMainOutline.Parent = DropdownTitle
+				DropdownFrameMainOutline.Parent = Dropdown
 				DropdownFrameMainOutline.BackgroundColor3 = Color3.fromRGB(37, 40, 43)
-				DropdownFrameMainOutline.Position = UDim2.new(-0.00155700743, 0, 2.16983342, 0)
+				DropdownFrameMainOutline.Position = UDim2.new(0, 3.5, 0, 44)
 				DropdownFrameMainOutline.Size = UDim2.new(0, 396, 0, 81)
 				DropdownFrameMainOutline.Visible = false
 
@@ -2347,10 +2346,10 @@ function DiscordLib:Window(text)
 				DropdownFrameMainOutlineCorner.Parent = DropdownFrameMainOutline
 
 				DropdownFrameMain.Name = "DropdownFrameMain"
-				DropdownFrameMain.Parent = DropdownTitle
+				DropdownFrameMain.Parent = Dropdown
 				DropdownFrameMain.BackgroundColor3 = Color3.fromRGB(47, 49, 54)
 				DropdownFrameMain.ClipsDescendants = true
-				DropdownFrameMain.Position = UDim2.new(0.00999999978, 0, 2.2568965, 0)
+				DropdownFrameMain.Position = UDim2.new(0, 5.5, 0, 48)
 				DropdownFrameMain.Selectable = true
 				DropdownFrameMain.Size = UDim2.new(0, 392, 0, 77)
 				DropdownFrameMain.Visible = false
@@ -2396,7 +2395,7 @@ function DiscordLib:Window(text)
 						ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 
 					else
-						Dropdown.Size = UDim2.new(0, 403, 0, 73)
+						Dropdown.Size = UDim2.new(0, 403, 0, 50)
 						DropdownFrameMain.Visible = false
 						DropdownFrameMainOutline.Visible = false
 						ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
@@ -3460,4 +3459,29 @@ function DiscordLib:Window(text)
 	end
 	return ServerHold
 end
-return DiscordLib
+local win = DiscordLib:Window("CloudWare")
+local serv = win:Server("Shindo", "")
+local Main = serv:Channel("Main")
+
+
+local Table = {
+    ["Defeat Bosses"] = true,
+    ["Defeat NPCs"] = true,
+    ["Find Cat"] = false,
+	["Clean Office"] = false,
+	["Deliver Envolope"] = false,
+	["Clean Graffiti"] = false,
+	["Deliver Groceries"] = false
+
+}
+
+Main:MultiDropdown("Select Quests",Table,function(list,bool)
+    Table[list] = bool
+end)
+Main:Toggle("Auto-Quests",false,function(bool)
+	AutoFarm = bool
+end)
+
+Main:Toggle("Auto-Quests",false,function(bool)
+	AutoFarm = bool
+end)
