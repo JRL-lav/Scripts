@@ -2095,9 +2095,8 @@ function DiscordLib:Window(text)
 				Icon.Image = "http://www.roblox.com/asset/?id=6035047409"
 				Icon.ImageColor3 = Color3.fromRGB(114, 118, 125)
 				local ToggleLibrary = {}
-				local ToggleLibrary2 = {}
 
-				function ToggleLibrary2:SetText(Value)
+				function ToggleLibrary:SetText(Value)
 					ToggleTitle.Text = Value
 				end
 				
@@ -2235,7 +2234,7 @@ function DiscordLib:Window(text)
 				end)
 
 				ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
-				return ToggleLibrary and ToggleLibrary2
+				return ToggleLibrary 
 			end
 
 
@@ -3460,4 +3459,3 @@ function DiscordLib:Window(text)
 	return ServerHold
 end
 return DiscordLib
---lol
