@@ -1,1 +1,306 @@
-return(function(e,...)local J="This file was obfuscated using PSU Obfuscator 4.0.A | https://www.psu.dev/ & discord.gg/psu";local t=e[(36230852)];local s=e[(158357821)];local v=e[(311903538)];local z=e[(193520923)];local W=e[(85809041)];local p=e['HAJP6khkQs'];local f=e[((30672756-#("uh oh everyone watch out pain exist coming in with the backspace method one dot two dot man dot")))];local _=e[(152643231)];local h=e[((673167290-#("uh oh everyone watch out pain exist coming in with the backspace method one dot two dot man dot")))];local G=e[(356127358)];local T=e['UAtic6I'];local c=e[(842224918)];local A=e[((#{768;970;340;(function(...)return 921,970;end)()}+289987732))];local g=e['B4cE1d'];local b=e[((#{}+738884129))];local l=e[((#{}+520721625))];local M=e[(168625552)];local D=e[((#{457;850;911;}+60744106))];local H=e[((#{71;(function(...)return;end)()}+496927749))];local U=e[(61061405)];local L=e["ZxL0h"];local Q=e[((#{388;}+627546485))];local y=e[(787046382)];local F=e.o8o0g8hJ;local j=e[((800647063-#("i am not wally stop asking me for wally hub support please fuck off")))];local Y=e[(915534047)];local w=e[(33573713)];local m=e[((#{974;128;}+182040892))];local x=e[(401162365)];local a=e[(738203264)];local r=e[(256453053)];local I=((getfenv)or(function(...)return(_ENV);end));local n,d,o=({}),(""),(I(c));local i=((o[""..e[t].."\105"..e[l].."\51\50"])or(o["\98"..e["zXB3Q6BY8"]..e[l]])or({}));local n=(((i)and(i["\98\120\111"..e[h]]))or(function(e,o)local l,n=c,s;while((e>s)and(o>s))do local t,c=e%a,o%a;if t~=c then n=n+l;end;e,o,l=(e-t)/a,(o-c)/a,l*a;end;if e<o then e=o;end;while e>s do local o=e%a;if o>s then n=n+l;end;e,l=(e-o)/a,l*a;end;return(n);end));local u=(a^b);local B=(u-c);local E,C,k;local u=(d[""..e['WVAHVnRBi4']..e[p]..e[Y].."\98"]);local u=(d[""..e[p].."\117"..e[t]]);local x=(d[""..e[t]..e[x]..e[l].."\101"]);local V=(d[""..e[A]..e.YYg3hXue.."\97"..e[h]]);local O=(o[""..e[w]..e[r].."\105\114\115"]);local P=(o[""..e[l].."\111\110\117\109\98"..e[f].."\114"]);local X=(o[""..e[p].."\101\108\101\99\116"]);local d=((o[""..e[Y]..e[m]..e[w]..e[r].."\99"..e[H]])or(o[""..e[l].."\97"..e[t].."\108\101"]["\117\110"..e[w]..e[r]..e[A].."\107"]));local w=(o["\116\121\112\101"]);local Y=((o[""..e[F]..e[r].."\116\104"]["\108\100"..e[f]..e[Q].."\112"])or(function(e,l,...)return((e*a)^l);end));local w=(o["\114\97\119"..e[p]..e[f]..e[l]]);local H=(o["\115\101"..e[l]..e[F].."\101\116\97"..e[l].."\97\98"..e[y].."\101"]);local w=(o["\109"..e[r].."\116\104"]["\102\108\111"..e[g]..e[h]]);k=(i[""..e[t].."\97"..e[m].."\100"])or(function(e,l,...)return(((e+l)-n(e,l))/a);end);local R=(i["\98"..e[g].."\114"])or(function(l,e,...)return(B-k(B-l,B-e));end);E=((i["\108\115\104"..e['zXB3Q6BY8']..e[D]..e[l]])or(function(l,e,...)if(e<s)then return(C(l,-(e)));end;return((l*a^e)%a^b);end));C=((i[""..e[h]..e[p].."\104\105"..e[D]..e[l]])or(function(l,e,...)if(e<s)then return(E(l,-(e)));end;return(w(l%a^b/a^e));end));local a=(i[""..e[t]..e[m].."\111"..e[l]])or(function(e,...)return(B-e);end);if((not(o[""..e[t]..e['zXB3Q6BY8']..e[l]..e.IBQhRVt6.."\50"]))and(not(o["\98"..e.zXB3Q6BY8.."\116"])))then i[""..e[t]..e[r]..e[m]..e[W]]=k;i[""..e[t]..e[g]..e[h]]=R;i["\108\115"..e.YYg3hXue.."\105\102"..e[l]]=E;i[""..e[t]..e[Q].."\111"..e[h]]=n;i[""..e[t]..e[m]..e[g]..e[l]]=a;i[""..e[h].."\115"..e.YYg3hXue..e['zXB3Q6BY8']..e[D].."\116"]=C;end;local a=(o[""..e[l].."\97\98"..e[y]..e[f]][""..e[h]..e[f]..e[F].."\111"..e.NbnyJq..e[f]]);local h=(o["\116\97"..e[t].."\108"..e[f]][""..e[A].."\111\110\99"..e[r]..e[l]]);local a=(o[""..e[l].."\97"..e[t]..e[y]..e[f]][""..e.zXB3Q6BY8..e[m]..e[p].."\101\114"..e[l]]);local m=(((o["\116"..e[r]..e[t]..e[y].."\101"]["\99\114"..e[f]..e[r]..e[l].."\101"]))or((function(e,...)return({d({},s,e);});end)));o[""..e[t].."\105\116\51"..e[j]]=i;local l=(T);local o=(#J+M);local a,p=({}),({});for e=s,o-c do local l=V(e);a[e]=l;p[e]=l;p[l]=e;end;local h,t=(function(n)local e,t,i=x(n,c,U);if((e+t+i)~=G)then l=l+_;o=o+U;end;n=u(n,L);local l,t,i=(""),(""),({});local e=c;local function r()local l=P(u(n,e,e),v);e=e+c;local o=P(u(n,e,e+l-c),v);e=e+l;return(o);end;l=p[r()];i[c]=l;while(e<#n)do local e=r();if a[e]then t=a[e];else t=l..u(l,c,c);end;a[o]=l..u(t,c,c);i[#i+c],l,o=t,t,o+c;end;return(h(i));end)("PSU|21325z25Z10101t1L18277239161m1n1M151L1L23G1q1727722321a1S21M2181b1123c1h1c2772211F191310131o1i111t1M1q22027m27721V21719281121123D28d1021X2171F131E1928K27x27722W27N141d1j1r1d1n1t161123728v102371i1N1j1c171T171L1F1D1623C27a27721u1Z1i1M21h21D1j1622x1J1e27722p1f1714182141c2A318191h191l22G1R1627723717161r171923E28M23727f141v1a29m29O1022021P1o2a811161d28l27n1022821O1D1o1S1N112321N1A277231121B1d1f1V1u1i1r1T2321p1427722f21E191823D2Ag27722V121h161n1223E1G1D27722821R161727m1w21i1N2AT2aV29n27B1021u2191B1T21Q21Q2CU2361k192772202131V101L1n21c217172371o1527722E21J1D1p1G23c2Cc27722R122bL1d21M2191n1L1S1d1229M28M22C21D1n101J182Db2C31022r1h2cM1L1H23c1m1b2772241Z1c121d21R21c1H1r2Bv22X2D028e28G1j1J121N2Eb2332E82ar161h171R2371S1127721321m1E1j2aI1m1h2172171S1Q2cM1521n21I1d111b1q1T1t1D22S2e821t21f1r1a181U22w1d1G2D22b02B22B421I21P101R21029v29x2aX22x1B172142182e61b2cP27721Y21B15192142141M1r2392DD2aI131H1m1P2dC2dE1022t2e32fw2f22AH1021d22P1P1C161622g1I1F2772E1192AD1V2952132CL2CN29M1u28329A1A1N23729Z2C42C61n1C2fB1B2c82952882322EU1023b1i171H1S1c181E1h22X2I227722a21F1o22s2aX2381r1s2aK2AM2Ao2E821W1x171G1r1q2bU2Bw102381D2ad23C28m2361N1k141G1m1722X2h41022S11171N1I23e2ax2212131Q1Y2dH2Dj23c2Jv22d1H2191422n21b2JV22821D1f27M2322G827722D21227F21n2131U15112HY2cm2AU2Dz2B722b2131h1l2D628k2I81021z1Y1H21C1X1m1G161B1a152KL172Bg2bI1022A2131r21P2hz2L02Gt102C51h101H141c1u2322dm1022p22a172B3172MD111l2Fw1721M2aX22u2912932iG2372E822X29g27f29x2IJ22x1Q21821o2Dp2bM2972e32772N42782BV27723b1M1j1S2Ha2772J91m101q2382iJ2JX162EL1t1p2gx2JN2n51026o25r1y2AX2Lz2F01T1s1023228m22E21f2C82bs21T27Q2fb102i52k321329H29J29l2Ef2EH102K42kv1121n219181f2C822X2n72B821d2dV2392L92362F721d2181M27E2jz21m21f1p1k23g2HQ2I92C71J28a182L527J28R192oJ2FH2c72fo27u121L22S2Jv22b21n2jJ102352KO102Gv151o2Eb2j61y28p2PL28K2OV22621B2iq23c2Bh2gU21b1r1N21I2Hz1J1N2332Ij2CS2cu21R2151t2C72kA2hB2E12M32m528m2252101R2eY28123c2ov28F2Ad22x2eG2hS21d1T1c2Ky2i023c2IV2O21b1I22y2ij22P1K112J32AM2Gg29y2A02Q221B171A1y2qj2jy21J21711152c12RM2mr1Q2mW2B72IX16131B2832352e82Kj2Qo2fu22X2AX2242111e1f1S29h2AO2JV2lz1j1423I2OV28o1R1O2342aX29Q12181r1h2TC23a2m72311c1a1e21m214152bs1L2PL2R92JG2381t2g423a2e821z2122iq2182192B62Ev2aD2M128K2RE102ej2eL1d21O2Ba2bC2QP2L922621N1o2A31n1X21i2jp1G2bM29M2L922a21j18122te1z2g22MN2962Nd1022u171D1V1m2jl2b72t12bL1O22z2iJ2B92BB2bd21H21E1S2382PV21N2ru29x2992k41o2Bv1E2QM2cM2qO2qq2d11022B2Ep2E31B2152VN2vP2hb2382Tr28S2qg2Lp22r2Ut2UY1f2B32Iz2e821V1Y2Iq29D23g2M721u2Da2LK2Pl1W21F1j2sQ2e82361j1F1a1B122342OV22u1f2qk2VC2A12kl1T18181423428M21Z21h2qO2Hw2Fy2e82eA1b19141R2362rm22121M21E22K1C2m02Ly2C62fA2cD2Ft1u121t1V2d72B422s2ij22F2Fr1721K1z2l62u92Ok22421l1K21e21i2m02sy1k2322Ax27D2Mt2JJ1L27w27Y2w4131n1521a2DX1821K2131L1j2332992Wi29L2Wk2V8151V1J23c2IJ21T1y2941v2Du1h28U2Z722B21O1Q2G321j2lv2CO2AX2hT2Hv29522x2q12dO2Dq21m21i171o1N1D15310m2ed2Pn2la2lC2s72S91827F1B2Ar2oK2f42JS1N21M2mZ2cd23528m2mW21821p2in27K2ov22c21n2842sm2hh22p2XK29K1R2Iu2I322T1M132312Ua2L32AL2AN21D2k82DK2ov2N9181t22X2M72222112cH2cJ310729M2JV21T21E102FI2Sr2Cq2ar2Yx2AN2Yz2UA22e21R2aG111K1D21L2KR2qp2Pd2lQ21j2DV151a2ps2Zz2s41R2jY22x2y52IW312z1S313131331121J2lS1T29W122TT2Bj1C2oy2jV22U1a2831T2332QH2y71H1q1b142QO2jS22X29922c29R101B2lu2KZ2Co2WO1521g29e18313L1022q2cD132352RM21y191p2232Jv2j9162em311H28E21813131t2O92L921u21C1R2Or21P2Kr181O21121F2Fx22W312X23b2tP2Qw31131F151P1i1d2Ff1m2u51022i21H121F1b1c1m2322ff2pE2Fk2Fm2FO2fQ2FS2fU2fW2FY28m22v182xv2bl27v2q427722b21M142VW1d2mg29621o21f310n1s1621r2Ek2EM192u323d2VQ27n311M2M72l32zH2p327u2132132EH172nJ2W32zU1027E102sx1b2Pu2Hb2342ey31152e82202152X62aA2XF102e12RH21i2dT22t2rM316D1b23d31392w421e1o21G2H0101i314U21J21j2uR31422UA2342Yd2tE2c821721k1I2Vo2Uv21J2LJ112UO2yw278312L2322l92wI28h19121G152C82Di2jr2iI2w331451i3147317A2aA2362ov22v2NM314G2ov22B21i141L22X2e82322t72UN2W22iw21n2SV1S21f21H2ER2311V1227722N1O22i2m72262171H2852no2122181J1P1E2Qp2IJ23b1O2no1o2h62dy2RL2I32372c823j2IJ22e1411312a317W2jn2Jp1S2xe313v2xc2Qk28a28S29k2352992251y1B1h1P1921i2eP2er142SF2772Mr2E627y1223631872352JQ1G1G21M21C1121D31af2hu1L2Hw29X1f319f2w421K1a2Ed2v8315q21G2Ba1L1i192YE2342jv31BJ1q27E2lX31931L172H61c2342uA2EA1j2BR1r2As2w1313v2EJ1821G31B52m72391R2YC1T318n1n318P318R2WB2HS3146310x2OV2Kc2kE2341B2ng2E92EB319r1H27s2P5311121M21L2mM2942v42O42o61n2bS21s21b313V2LB1H2rj2lw2UA31542cM1A1x31272cI2ln28m21V2181t1n1Y2WA2Jv21Y314E2qf2992U02IQ2qm312k19312m2OK2UK2um2jz2WZ28i23c3187312J2Y9102YB2Yd2YF1N2yh2Jv318l2Am2SE2jv31261d2172U42M721V310i101n2Fu21j2WQ182ws318731Cu27e21321j2fB313622n2362Gw2tx2jv2xU2xW2OU2Tu2CH2dK2Ua2Uw2Uy2TE2wz2x12SE2rm2341s1u2HG2CE2uG2BD2332al2nE1x13171K1p1o2s72aD2132161A2In1821a28G1L21D2X02Fu2lN3162102p11r2P331E42P731E729231e92N22Lp21z2vn310H314a29M317r2KE2vk239318731bC31fq315l2g42wl1H2pP2Bs233316C2c62C81B1O22p2n327721S26726722L2uA2252Gx1J21j2HU1429S22I1Y2xT2IC2DX319s2JV22c2122e5152352Ax2LB31322Pi2li23M26Z277112Ob2N5121I2G92n51I1a25m25u31JT31Ju2fB31122192dp31k125w25O277314z31K1111p2771431J81A22t23H277151531k122S23g2772hN31K11c1k2772md31K123x2452772XJ31K121f2172772hU31K125424G2771A1A31k122K21W2771B2rO1a22Q23E2771c1C31k124p24X2771d1D31k11w21k2771E1E31K1131r2771f31ce1a23V24327731c331K125x25p27731iM31K123B2332771I31Mq1A21q2122772ex31K124V2532771k1K31K124I25627727J31K126725J2771M1m31K121O2102771N2k01A31L82771O2861a23r24F2771P315N1a22a2222771q1Q31k123h22t2771R1R31k121v22j2771s1s31K123n24b2772fW31k121k1w2771U2bQ1a26325f2771V1V31k11Y21m2771W1w31K125824K2771X1x31k124K2582771Y1Y31K122722F2771Z29r2I52hR1021021031k125l25T27721121131k123E22q27721221231K121g2182FC21331K125124T2772GZ31K125324v27721521531k11F2N321621631K122r23F2772fk31k1216312E1021821831k121a21I27721921931k124D23P27721A21A31K126025c27721B21b31K125524H27721C21C31k12AC27721d21D31k124Z24r27721E21E31K131k127721f21f31k122w23427721g21G2Fb2ru21b21G31kA1A22522d31ke1331K122922131KJ31KL21721F31kP31kR1a21521D31kV1631K124A23M31l01731K11R2i331l61a22222a31La1931k1316o31lF31lh1A22622E31Ll31Ln1s2jg31ls31k121p21131LX31LZ1A25224U31m331m51A24y24Q31m931mb25S25k31mf1G31k123d22P31mk1H31k121c21431MP31Mr23J22V31mV31D61A24123T31n031n21A23722z31n631CO1A24223u31Nb31nd1a2X131NH31nj101o31Nm31no21Y22M31NS31NU25U25m31nY31o01A1K2Z731O531k125V25n31oa31OC1a22y23631og1t31K121S22g31Ol31ON1p2OB31os31K124W24O31Ox31Oz1A24l25931P331p51A25Z25r31P931pB1a21X22L31PF31ph25t25L27731Pl31k123c22O31pQ31pS1A22L21x31pW31Py1a21U22i31q231K122M21y31q721431K11831JZ31Qd31K124b23n27731Qi31K125024S31qN21731k122422C27731QT31k123Z24731QY31r01A22X23531R431r61a26225e31ra31Rc1a31nf31rG31RI1A23w24431rL31Rn1A21w22K31rr31Rt1A26425G31rW31ry1A22U23i31S231s4132uZ31S731s923M24a31SD31k125b24n31SI31k11m2rz31kQ31K1151T31SR31K125y25Q31sw31K124M25A31l51831K123622y31T531K123823031T931k122b22331TE31k122e22631lr31lt1A23f22r31Tm31K124x24p31Tr31K125q25y31tw31K122F22731u031k124U25231U531k121L1X31UA31k122Z23731Ue31k121421C31uJ31K125K25s31uO31k125p25x31UT31K123522X31ux31k126525h31v131k124723Z31V531k122J21V31v931K122i21U31o431O61A24n25B31vi31k123P24d31Vn31K123i22U31vS31K11T2hb31VW1a21d21531W031K124023s31w531K124f23R31wA31k121021O31wf31K11u2hh31wK1A24423W31Wo31k122O23C31wt31k122C22431Wy1a24g25431x231K11v2b731X71a25924L31xB31QJ1a23s24031xG31K122h21T31Xl31qU1a22022831xq31K121r21331Xv31K125724j31Y031k123T24131Y431k124523X31Y931K121321r31YE31K124J25731Yj31k124h25531yo111231m731ys31jX1a21i21a31yw1A26125D31z01A21z22N31Sm31k123o24c31z81A23a23231Zc31LG31cF31t123g22s31zl1a21j21B31Zp1a24r24z31Zt1a21h21931zx31k124923L32022x72fg1031M431K124E23q320a1a26625I320e1A23323b320I31HL2d5318D31mr21n1Z320Q1A22p23D320U1A31V0320y1A31Rk312f31uU22322b32161a25A24M321A1A24623y321E1A2Ab321i1a21T22H321M31k124Q24Y321R1A228220321v1A23k248321z1A22N21z31or31ot1a24C23o32271a23422w322B2tl31dy31pa31k123q24e322J1a23U24231wJ31Pm1a23223a322R1a21821G322v1a24323v322Z21221Q32331A22122931Qc31qE1a24S250323b31K125624i323g31CI2CD31qS323l24o24w323P1a23y246323T1a22V23J323X1a24823K32411A24t25132451A23923132491A230238324D1a21E216324H152XX324L31jU1031LY28431Se1a2112Gf1031Kk32A4318V31Z432A932aB2hn23N24126U26c31si25x3211318D1m22r31uD102xj2lF312z2XI2Xj32ae181331lb1A21921H31ZP1m21831U931472Ro1M23X31Ui1031ls1x22222z1l2Hl31TI32ah31Tm32A41J2TF31m432A42A01E31Ls111D31ls1E1232By2Fb31ob32BC31K1121q31Zx32bz1c1x21731lg1A32A42822g41823n24E25k32aq31Kk26D26d31Mp32AS32AU31kK1X26T25w2ED31kK31b32id32B232Ag22g21S31sr32ci2os32AD31K72tW31kk31k125N25V324Y1a21m1Y325223l249325622d22531ZG31k1161u325c1G2cQ32571a1z311F32C71a142o132Bh31zy231239325s1q31a8325V1e31s51r1l1E32DE31EP21L324y1m24f31Of317H2hn141232A12OB2md1031kQ32AC32d2326P32ER32A432Ex2772dp2ns31Si31k532F832a431pA31FM31k61032f731K62Fb32f52nS32f731im31oG2uA2uc2Em2uF2Vk2QP28M31gu2UZ2h7319C2bX21K31aS31au29M31201M3122319T2hH2st31oS2AN23431Iw31wJ22S22L319k319m31Fi2y62Uw313031322ED313f313H313J2z627z2132VW142vy2qn2QP2Rm29Q1F2372QC2qE182nr2n52nU21432Ge31IX22l28m2nF2Ak28922s313v22B2121n1F141T21J27t27v28M2Vj2UH2bf31EH2lc31ek2aV21y326e32fE32f829s2dy2N51x1Z2PS2l631p3211319r32IC32Ar32i732Fe1x21A1F1l2RT31JU31P42D632iO1132CE31ci32is31S531ls2n41x2142AD32ig1x2181d31n12N432a431Nc2n431k131uW32Jb1a322131K532jC2Ok2Dp32Ak21F320l2n431C332ct31D0324U31Vc31Sm32j92Ng32dB2M12M032Cw2162IE1232d132A4314Z32F032i62hH32cW21d1g1k1g32d132342b72hn32bV181632cw1W2Mf2m232cW21B1E32d032cw2151832kD32k42fB1H1g2b329632kZ2M02mE2ch2tK2Hn32L31028H32KL1432cM2q131WA32FA32Fk2N52XJ21H21H"),(#J-z);local function o(l,e,...)if(l==582057398)then return(n(((n(e,510134))-74695)-370517,619069));elseif(l==831940624)then return((((n(e,958293))-713386)-664518)-908534);elseif(l==662991885)then return(n((((e)-342533)-592224)-410487,935844));elseif(l==116231992)then return(n((((e)-557168)-639668)-613314,418361));elseif(l==778546114)then return(((n(e,441396))-150886)-999727);elseif(l==86145368)then return(n((((e)-335032)-742676)-151470,168665));elseif(l==74593956)then return(n(n((e)-264700,149324),204751));elseif(l==488415029)then return((((n((e)-975736,552533))-193803)-300728)-763863);elseif(l==640484710)then return(n((n(e,110310))-393558,564181));elseif(l==400163193)then return(n((n(e,190715))-30203,382440));elseif(l==208410035)then return(((n(n(e,896863),39651))-729868)-858013);elseif(l==131631313)then return((n((n(n(e,181274),69088))-351118,562858))-500732);else end;end;local g=e[(143055006)];local y=e[(158357821)];local s=e[(202019122)];local B=e[((61061447-#("this isn't krnl support you bonehead moron")))];local f=e[(738203264)];local a=e[(842224918)];local r=e['BlYAHG1UpC'];local o=e['Do1mFWes0'];local function i()local e=n(x(h,t,t),l);l=e%o;t=(t+a);return(e);end;local function c()local e,a,i,c=x(h,t,t+B);e=n(e,l);l=e%o;a=n(a,l);l=a%o;i=n(i,l);l=i%o;c=n(c,l);l=c%o;t=t+r;return((c*s)+(i*g)+(a*o)+e);end;local function s(o,e,l)if(l)then local e=(o/f^(e-a))%f^((l-a)-(e-a)+a);return(e-(e%a));else local e=f^(e-a);return(((o%(e+e)>=e)and(a))or(y));end;end;local function r()local a,e=x(h,t,t+f);a=n(a,l);l=a%o;e=n(e,l);l=e%o;t=t+f;return((e*o)+a);end;local F=""..e["Jj7c8U0Hu"];local function o(...)return({...}),X(F,...);end;local function v(...)local I=e[(621754300)];local m=e['jiJF18Ocs'];local F=e["BlYAHG1UpC"];local a=e[(158357821)];local E=e[((#{}+522138266))];local P=e[(382977803)];local k=e[((#{(function(...)return 225,694;end)()}+61061403))];local X=e['gH8QF0zm'];local U=e[((254805368-#("oh Mr. Pools, thats a little close please dont touch me there... please Mr. Pools I am only eight years old please stop...")))];local v=e[(342068829)];local T=e[(36165088)];local J=e[(644561955)];local j=e[(576720473)];local V=e[(257921127)];local L=e[(580520571)];local z=e[(777286031)];local y=e['ZxL0h'];local D=e[((#{344;177;674;20;(function(...)return 307,202,278,441;end)()}+439538593))];local C=e.XaORkU;local Q=e[((713171259-#("why does psu.dev attract so many ddosing retards wtf")))];local H=e[((464932492-#("Luraph: Probably considered the worst out of the three, Luraph is another Lua Obfuscator. It isnt remotely as secure as Ironbrew or Synapse Xen, and it isn't as fast as Ironbrew either.")))];local w=e["Do1mFWes0"];local g=e[((738203386-#("oh Mr. Pools, thats a little close please dont touch me there... please Mr. Pools I am only eight years old please stop...")))];local o=e[((842225013-#("uh oh everyone watch out pain exist coming in with the backspace method one dot two dot man dot")))];local M=e[((805833413-#("I hate this codebase so fucking bad! - notnoobmaster")))];local B=e[(738884129)];local function b(...)local f=({});local e=({});local A=({});local W=i(l);for r=a,c(l)-o,o do local d=i(l);if(d==T)then local l=i(l);e[r]=(l~=a);elseif(d==V)then while(true)do local l=c(l);e[r]=u(h,t,t+l-o);t=t+l;break;end;elseif(d==M)then while(true)do local c=c(l);if(c==a)then e[r]=('');break;end;if(c>P)then local a,i=(''),(u(h,t,t+c-o));t=t+c;for e=o,#i,o do local e=n(x(u(i,e,e)),l);l=e%w;a=a..p[e];end;e[r]=a;else local o,a=(''),({x(h,t,t+c-o)});t=t+c;for t,e in O(a)do local e=n(e,l);l=e%w;o=o..p[e];end;e[r]=o;end;break;end;elseif(d==j)then while(true)do local t=c(l);local n=c(l);local c=o;local t=(s(n,o,L)*(g^B))+t;local l=s(n,J,I);local n=((-o)^s(n,B));if(l==a)then if(t==a)then e[r]=(n*a);break;else l=o;c=a;end;elseif(l==z)then e[r]=(t==a)and(n*(o/a))or(n*(a/a));break;end;e[r]=Y(n,l-Q)*(c+(t/(g^E)));break;end;else e[r]=nil end;end;local n=c(l);for e=a,n-o,o do f[e]=({});end;for w=a,n-o,o do local n=i(l);if(n~=a)then n=n-o;local h,d,x,t,p,B=a,a,a,a,a,a;local u=s(n,o,k);if(u==o)then x=(i(l));t=(c(l));d=(r(l));elseif(u==m)then elseif(u==a)then h=(r(l));x=(i(l));t=(r(l));d=(r(l));elseif(u==y)then h=(r(l));x=(i(l));t=(c(l));d=(r(l));p=({});for e=o,h,o do p[e]=({[a]=i(l),[o]=r(l)});end;elseif(u==g)then x=(i(l));t=f[(c(l))];d=(r(l));elseif(u==k)then h=(r(l));x=(i(l));t=f[(c(l))];d=(r(l));end;if(s(n,m,m)==o)then h=e[h];end;if(s(n,y,y)==o)then t=e[t];end;if(s(n,D,D)==o)then B=f[c(l)];else B=f[w+o];end;if(s(n,F,F)==o)then d=e[d];end;if(s(n,C,C)==o)then p=({});for e=o,i(),o do p[e]=c();end;end;local e=f[w];e[H]=B;e['gllD3VsGi']=p;e['DcwWF0']=x;e["uTEPZj"]=d;e[-v]=h;e["lof3TyItv0"]=t;end;end;for e=a,c(l)-o,o do A[e]=b();end;local l=r(l);return({[-98738.25923234748]=f;[-X]=A;["Aph2DJdO"]=a;["TXT24Gg0"]=W;['PdkY0lPz9']=l;[-U]=e;});end;return(b(...));end;local function x(e,s,r,...)local o=0;local i=e["PdkY0lPz9"];local a=e["TXT24Gg0"];local g=e[-549309];local t=e[-98738.25923234748];local e=e[-166700];return(function(...)local u={...};local c=-585474;local f=-(1);local e=(678700615);local n="lof3TyItv0";local A="gllD3VsGi";local l={};local w="DcwWF0";local y=(X(F,...)-1);local h=t[o];local t=66247;local e=(true);local o='uTEPZj';local p={};local B=({});for e=0,y,1 do if(e>=a)then p[e-a]=u[e+1];else l[e]=u[e+1];end;end;local u=y-a+1;while(true)do local e=h;local a=e[w];h=e[t];if(a<=16)then if(a<=7)then if(a<=3)then if(a<=1)then if(a==0)then elseif(a<=1)then l[e[o]]=l[e[n]];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=r[e[n]];e=e[t];l[e[o]]=r[e[n]];e=e[t];l[e[o]]=l[e[n]][e[c]];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=#l[e[n]];e=e[t];local a=e[o];l[a]=l[a](d(l,a+1,e[n]));for e=a+1,i do l[e]=nil;end;e=e[t];l[e[o]]=l[e[n]][l[e[c]]];e=e[t];local a=e[o];l[a]=l[a](l[a+1]);for e=a+1,i do l[e]=nil;end;e=e[t];l[e[o]]=e[n];e=e[t];local r=e[n];local a=l[r];for e=r+1,e[c]do a=a..l[e];end;l[e[o]]=a;e=e[t];local o=e[o];l[o](d(l,o+1,e[n]));for e=o+1,i do l[e]=nil;end;e=e[t];e=e[t];end;elseif(a==2)then local e=e[o];do return d(l,e,f);end;elseif(a<=3)then s[e[n]]=l[e[o]];end;elseif(a<=5)then if(a==4)then l[e[o]]=r[e[n]];elseif(a<=5)then local a=g[e[n]];local t=e[A];local n={};local i=H({},{__index=function(l,e)local e=n[e];return(e[1][e[2]]);end,__newindex=function(o,e,l)local e=n[e];e[1][e[2]]=l;end;});for o=1,e[c],1 do local e=t[o];if(e[0]==0)then n[o-1]=({l,e[1]});else n[o-1]=({s,e[1]});end;B[#B+1]=n;end;l[e[o]]=x(a,i,r);end;elseif(a>6)then do return;end;elseif(a<7)then l[e[o]]=l[e[n]]+e[c];end;elseif(a<=11)then if(a<=9)then if(a==8)then l[e[o]]=l[e[n]];e=e[t];l[e[o]]=e[n];e=e[t];local a=e[o];l[a](d(l,a+1,e[n]));for e=a+1,i do l[e]=nil;end;e=e[t];l[e[o]]=m(e[n]);e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];e=e[t];elseif(a<=9)then local o=e[o];l[o](d(l,o+1,e[n]));for e=o+1,i do l[e]=nil;end;end;elseif(a==10)then e=e[t];local n=e[o];f=n+u-1;for e=0,u do l[n+e]=p[e];end;for e=f+1,i do l[e]=nil;end;e=e[t];local o=e[o];do return d(l,o,f);end;e=e[t];e=e[t];elseif(a<=11)then l[e[o]]=l[e[n]];end;elseif(a<=13)then if(a>12)then l[e[o]]=m(256);elseif(a<13)then l[e[o]]=l[e[n]][l[e[c]]];end;elseif(a<=14)then local o=e[o];l[o]=l[o](d(l,o+1,e[n]));for e=o+1,i do l[e]=nil;end;elseif(a==15)then l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];e=e[t];elseif(a<=16)then l[e[o]]=x(g[e[n]],(nil),r);end;elseif(a<=25)then if(a<=20)then if(a<=18)then if(a>17)then local o=e[o];l[o]=0+(l[o]);l[o+1]=0+(l[o+1]);l[o+2]=0+(l[o+2]);local t=l[o];local a=l[o+2];if(a>0)then if(t>l[o+1])then h=e[n];else l[o+3]=t;end;elseif(t<l[o+1])then h=e[n];else l[o+3]=t;end;elseif(a<18)then l[e[o]]=s[e[n]];end;elseif(a>19)then local t=e[o];local o=l[e[n]];l[t+1]=o;l[t]=o[e[c]];elseif(a<20)then l[e[o]]=#l[e[n]];end;elseif(a<=22)then if(a==21)then l[e[o]]=l[e[n]][e[c]];elseif(a<=22)then local e=e[o];l[e](l[e+1]);for e=e,i do l[e]=nil;end;end;elseif(a<=23)then l[e[o]]=m(e[n]);elseif(a==24)then l[e[o]]=e[n];elseif(a<=25)then l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];e=e[t];end;elseif(a<=29)then if(a<=27)then if(a>26)then local o=e[o];local t=e[n];local a=50*(e[c]-1);local n=l[o];local e=0;for t=o+1,t do n[a+e+1]=l[o+(t-o)];e=e+1;end;elseif(a<27)then l[e[o]]=m(e[n]);e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];e=e[t];end;elseif(a>28)then local o=e[o];local a=l[o+2];local t=l[o]+a;l[o]=t;if(a>0)then if(t<=l[o+1])then h=e[n];l[o+3]=t;end;elseif(t>=l[o+1])then h=e[n];l[o+3]=t;end;elseif(a<29)then local e=e[o];l[e]=l[e](l[e+1]);for e=e+1,i do l[e]=nil;end;end;elseif(a<=31)then if(a>30)then local a=e[o];l[a](l[a+1]);for e=a,i do l[e]=nil;end;e=e[t];l[e[o]]=s[e[n]];e=e[t];l[e[o]]=l[e[n]]+e[c];e=e[t];s[e[n]]=l[e[o]];e=e[t];l[e[o]]=r[e[n]];e=e[t];local a=e[o];local r=l[e[n]];l[a+1]=r;l[a]=r[e[c]];e=e[t];l[e[o]]=e[n];e=e[t];local a=e[o];l[a]=l[a](d(l,a+1,e[n]));for e=a+1,i do l[e]=nil;end;e=e[t];l[e[o]]=l[e[n]][e[c]];e=e[t];l[e[o]]=l[e[n]][e[c]];e=e[t];local r=e[o];local a=l[e[n]];l[r+1]=a;l[r]=a[e[c]];e=e[t];l[e[o]]=s[e[n]];e=e[t];l[e[o]]=s[e[n]];e=e[t];l[e[o]]=l[e[n]][l[e[c]]];e=e[t];local o=e[o];l[o](d(l,o+1,e[n]));for e=o+1,i do l[e]=nil;end;e=e[t];e=e[t];elseif(a<31)then l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];e=e[t];end;elseif(a<=32)then e=e[t];l[e[o]]=r[e[n]];e=e[t];l[e[o]]=l[e[n]][e[c]];e=e[t];l[e[o]]=l[e[n]][e[c]];e=e[t];l[e[o]]=r[e[n]];e=e[t];l[e[o]]=l[e[n]][e[c]];e=e[t];l[e[o]]=l[e[n]][e[c]];e=e[t];l[e[o]]=l[e[n]][e[c]];e=e[t];l[e[o]]=l[e[n]][l[e[c]]];e=e[t];l[e[o]]=l[e[n]][e[c]];e=e[t];local r=e[o];local a=l[e[n]];l[r+1]=a;l[r]=a[e[c]];e=e[t];local a=e[o];l[a](l[a+1]);for e=a,i do l[e]=nil;end;e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];l[e[o]]=e[n];e=e[t];e=e[t];elseif(a>33)then local e=e[o];f=e+u-1;for o=0,u do l[e+o]=p[o];end;for e=f+1,i do l[e]=nil;end;elseif(a<34)then local t=e[n];local n=l[t];for e=t+1,e[c]do n=n..l[e];end;l[e[o]]=n;end;end;end);end;return x(v(),{},I())(...);end)(({[((#{(function(...)return 31,343;end)()}+747171580))]=("\116");[(342068829)]=(((585512-#("psu 34567890fps, luraph 1fps, xen 0fps"))));[((496927821-#("why the fuck would we sell a deobfuscator for a product we created.....")))]=(((#{}+692148209)));[(520721625)]=((747171582));[((#{943;}+356127357))]=((248));[(289987737)]=(((917163599-#("who the fuck looked at synapse xen and said 'yeah this is good enough for release'"))));[((#{343;}+318654981))]=("\109");[((#{987;691;630;510;(function(...)return;end)()}+989568149))]=("\110");['HAJP6khkQs']=((256190473));[(144414373)]=("\111");[(61061405)]=(((70-#("@everyone designs are done. luraph website coming.... eta JULY 2020"))));[(158357821)]=((0));["ZxL0h"]=(((#{394;238;732;}+2)));[((522138327-#("guys someone play Among Us with memcorrupt he is so lonely :(")))]=(((82-#("please suck my cock :pleading:"))));['B4cE1d']=((144414373));[(915534047)]=((366150208));[(621754300)]=(((#{509;21;432;657;}+27)));['YYg3hXue']=("\104");["gH8QF0zm"]=(((#{837;(function(...)return 220;end)()}+549307)));[(382977803)]=(((5052-#("I hate this codebase so fucking bad! - notnoobmaster"))));[(627546486)]=((379847115));[((808758746-#("LuraphDeobfuscator.zip (oh god DMCA incoming everyone hide)")))]=("\100");[(787046382)]=((626119281));[(527137606)]=("\97");[(746736690)]=("\102");[(738203264)]=(((#{}+2)));[(379847115)]=("\120");['zXB3Q6BY8']=("\105");[(257921127)]=((38));[((738884181-#("why does psu.dev attract so many ddosing retards wtf")))]=((32));[((842224958-#("still waiting for luci to fix the API :|")))]=(((#{(function(...)return;end)()}+1)));[((#{667;}+644561954))]=(((#{(function(...)return 674,73,398,...;end)(931)}+17)));[(366150208)]=("\117");[(85809041)]=(((808758794-#("I'm not ignoring you, my DMs are full. Can't DM me? Shoot me a email: mem@mem.rip (Business enquiries only)"))));[((202019143-#("psu == femboy hangout")))]=((16777216));BlYAHG1UpC=(((#{33;704;465;}+1)));[((60744187-#("luraph is now down until further notice for an emergency major security update")))]=((746736690));[((#{446;(function(...)return 638,704,386;end)()}+221767858))]=("\114");[(696871141)]=("\50");NbnyJq=("\118");[(805833361)]=(((69-#("still waiting for luci to fix the API :|"))));[(182040894)]=((989568153));[((439538679-#("luraph is now down until further notice for an emergency major security update")))]=(((38-#("please suck my cock :pleading:"))));WVAHVnRBi4=("\103");[(692148209)]=("\107");["UAtic6I"]=(((132-#("Luraph v12.6 has been released!: changed absolutely fucking nothing but donate to my patreon!"))));[(401162365)]=((603306154));[(30672661)]=(((541375851-#("I'm not ignoring you, my DMs are full. Can't DM me? Shoot me a email: mem@mem.rip (Business enquiries only)"))));o8o0g8hJ=((318654982));['jiJF18Ocs']=((6));[((800647057-#("guys someone play Among Us with memcorrupt he is so lonely :(")))]=(((#{332;660;}+696871139)));[(673167195)]=((221767862));[(36165088)]=((48));[((#{302;570;(function(...)return;end)()}+580520569))]=(((#{299;616;538;752;(function(...)return 425,154,276,379;end)()}+12)));[((254805288-#("this isn't krnl support you bonehead moron")))]=(((#{257;457;170;(function(...)return 75,394;end)()}+166695)));[((#{359;775;}+256190471))]=("\115");[(311903538)]=((36));[((#{600;650;}+626119279))]=("\108");[((#{358;81;}+36230850))]=((772238584));[(152643231)]=((160));[((33573740-#("IIiIIiillIiiIIIiiii :troll:")))]=(((454488302-#("oh Mr. Pools, thats a little close please dont touch me there... please Mr. Pools I am only eight years old please stop..."))));['Do1mFWes0']=((256));[((#{811;449;978;}+772238581))]=("\98");Jj7c8U0Hu=("\35");[(143055006)]=((65536));[((777286098-#("@everyone designs are done. luraph website coming.... eta JULY 2020")))]=(((#{472;366;(function(...)return 97,888,842,463;end)()}+2041)));[((#{479;895;503;}+193520920))]=((90));XaORkU=(((#{(function(...)return;end)()}+7)));[((603306228-#("psu premium chads winning (only joe biden supporters use the free version)")))]=("\121");[((#{983;548;647;}+541375741))]=("\101");["IBQhRVt6"]=("\51");[((#{515;391;544;299;}+576720469))]=((23));[(256453053)]=((527137606));[(168625552)]=(((#{373;488;(function(...)return 364,756,...;end)(99)}+160)));[((713171268-#("guys someone play Among Us with memcorrupt he is so lonely :(")))]=(((#{688;210;899;438;(function(...)return;end)()}+1019)));[(917163517)]=("\99");[((#{151;479;}+464932305))]=(((66318-#("why the fuck would we sell a deobfuscator for a product we created....."))));[(454488180)]=("\112");}),...)
+
+    local library = loadstring(game:HttpGet("https://demonslayer0002.xyz/Kraken/other/nothing.lua.php"))()
+    local lib = library.new("Kraken")
+
+    -- themes
+    local themes = {
+    Background = Color3.fromRGB(24, 24, 24),
+    Glow = Color3.fromRGB(255, 0, 0),
+    Accent = Color3.fromRGB(255, 0, 0),
+    LightContrast = Color3.fromRGB(20, 20, 20),
+    DarkContrast = Color3.fromRGB(14, 14, 14),  
+    TextColor = Color3.fromRGB(255, 255, 255)
+    }
+
+    -- first page
+    local Main = lib:addPage("Main", 5012544693)
+    local MainSection = Main:addSection("Main")
+
+    MainSection:addSlider("Walk Speed Adjuster", 16, 16, 200, function(value)
+        game:GetService('Players').LocalPlayer.Character.Humanoid.WalkSpeed = value
+    end)
+
+    MainSection:addSlider("Jump Power Adjuster", 50, 50, 300, function(value)
+        game:GetService('Players').LocalPlayer.Character.Humanoid.JumpPower = value
+    end)
+
+    local Devil = lib:addPage("Devil Fruit", 5012544693)
+    local DevilSection = Devil:addSection("Devil Fruit")
+
+    _G.KINGdevilexecute = true
+        
+    DevilSection:addToggle("Devil Fruit ESP", nil, function(DevilEsp)  
+        if DevilEsp == true then
+            _G.KINGdevilstuff = true
+            if _G.KINGdevilexecute == false then
+            elseif _G.KINGdevilexecute == true then
+                _G.KINGdevilexecute = false
+                while wait(2) do 
+                    for i,v in pairs(game.Workspace:GetDescendants()) do
+                        if v.ClassName == "Tool" and v:FindFirstChild("DevilFruit") then
+                            if v.Handle:FindFirstChild("BillboardGui") then
+                                if _G.KINGdevilstuff == true then
+                                    v.Handle:FindFirstChild("BillboardGui").Enabled = true
+                                elseif _G.KINGdevilstuff == false then
+                                    v.Handle:FindFirstChild("BillboardGui").Enabled = false
+                                end
+                            else
+                            local BillboardGui = Instance.new("BillboardGui")
+                            local TextLabel = Instance.new("TextLabel")
+                            
+                            BillboardGui.Parent = v.Handle
+                            BillboardGui.AlwaysOnTop = true
+                            BillboardGui.LightInfluence = 1
+                            BillboardGui.Size = UDim2.new(0, 50, 0, 50)
+                            BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
+                            
+                            TextLabel.Parent = BillboardGui
+                            TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+                            TextLabel.BackgroundTransparency = 1
+                            TextLabel.Size = UDim2.new(1, 0, 1, 0)
+                            TextLabel.Text = v.Name
+                            TextLabel.TextColor3 = Color3.new(0, 0, 1)
+                            TextLabel.TextScaled = true
+                            end
+                        end
+                    end
+                end
+            end
+
+        else
+            _G.KINGdevilstuff = false
+            for i,v in pairs(game.Workspace:GetDescendants()) do
+                if v.ClassName == "BillboardGui" and v.Parent.Parent:IsA("Tool") and v.Parent.Parent:FindFirstChild("DevilFruit") then
+                    v.Enabled = false
+                end
+            end
+        end    
+    end)
+
+    DevilSection:addToggle("Devil Fruit Snatcher", nil, function(DFSnatcher)  
+        if DFSnatcher == true then
+            _G.DFSnatch = true
+            repeat wait()
+                for i,v in pairs(game.Workspace:GetDescendants()) do
+                    if v.ClassName == "Tool" and v:FindFirstChild("DevilFruit") then
+                        if v.Parent:FindFirstChild("HumanoidRootPart") then
+                        else
+                            v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                        end
+                    end
+                end
+                until _G.DFSnatch == false
+        else
+            _G.DFSnatch = false
+        end    
+    end)
+
+    local Misc = lib:addPage("Misc", 5012544693)
+    local MiscSection = Misc:addSection("Misc")
+
+    MiscSection:addSlider("FOV", 70, 1, 120, function(FOV)
+        game.Workspace.Camera.FieldOfView = FOV
+    end)
+
+    MiscSection:addButton("FullBright", function()
+        if game.Lighting:FindFirstChild("DepthOfField") then
+            game.Lighting:FindFirstChild("DepthOfField"):Destroy()
+        end
+        if game:FindFirstChild("Lighting") then
+            game:FindFirstChild("Lighting").FogEnd = 9999999999999
+            game:FindFirstChild("Lighting").FogStart = 9999999999999
+        end
+    end)
+
+    MiscSection:addToggle("Show Hitbox", nil, function(Hitbox)
+        if Hitbox == true then
+            settings():GetService("RenderSettings").ShowBoundingBoxes = true
+        else
+            settings():GetService("RenderSettings").ShowBoundingBoxes = false
+        end
+    end)
+
+
+
+
+    MiscSection:addToggle("First Person", nil, function(FirstPerson)
+        if FirstPerson == true then
+            game.Players.LocalPlayer.CameraMaxZoomDistance = 0.5
+            game.Players.LocalPlayer.Character.Humanoid.CameraOffset = Vector3.new(0, 0, -1)
+            for childIndex, child in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                if child:IsA("BasePart") and child.Name ~= "Head" then
+                    child:GetPropertyChangedSignal("LocalTransparencyModifier"):Connect(
+                        function()
+                            child.LocalTransparencyModifier = child.Transparency
+                        end)
+                end
+            end
+        else
+            game.Players.LocalPlayer.CameraMaxZoomDistance = 128
+            game.Players.LocalPlayer.Character.Humanoid.CameraOffset = Vector3.new(0, 0, 0)
+            if game.Players.LocalPlayer.Character:FindFirstChild("Hair1") then
+                game.Players.LocalPlayer.Character:FindFirstChild("Hair1").Transparency = 0;
+            end
+            if game.Players.LocalPlayer.Character:FindFirstChild("Hair2") then
+                game.Players.LocalPlayer.Character:FindFirstChild("Hair2").Transparency = 0;
+            end
+        end
+    end)
+
+
+
+    MiscSection:addKeybind("Hard Reset", Enum.KeyCode.Delete, function()
+        game.Players.LocalPlayer.Character.Humanoid.Health = 0;
+    end)
+
+    MiscSection:addKeybind("ClickTP", Enum.KeyCode.Insert, function()
+        mouse = game.Players.LocalPlayer:GetMouse()
+        if mouse.Target then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+        end
+    end)
+
+
+
+    local Teleport = lib:addPage("Teleports", 5012544693)
+    local TeleportSection = Teleport:addSection("Islands")
+    local Shops = Teleport:addSection("Shops")
+
+    TeleportSection:addDropdown("Islands", {"Start Island", "Pirate Island", "Soldier Island", "Snow Island", "Desert Island", "Shark Island", "Chef Ship", "Bubble Island", "Sky Island", "Lobby Island", "Zombie Island", "War Island", "Fishland"}, function(text)
+        if text == "Start Island" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2071.33105, 50.6024857, -1852.72351)
+        elseif text == "Pirate Island" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3880.79297, 10.2437038, 125.918167)
+        elseif text == "Soldier Island" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1857.82764, 14.2860861, 1129.86011)
+        elseif text == "Snow Island" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2948.12402, 29.3862724, 1970.98535)
+        elseif text == "Desert Island" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1457.87061, 11.015007, 3625.62329)
+        elseif text == "Shark Island" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3920.354, 11.4646082, 3162.19141)
+        elseif text == "Chef Ship" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-27.3381653, 99.7289581, 83.6775894)
+        elseif text == "Bubble Island" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8173.72705, 11.1976604, 5677.74072)
+        elseif text == "Sky Island" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(193.909821, 2703.27588, 5001.65479)
+        elseif text == "Lobby Island" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3818.83105, 17.8524094, 6403.13135)
+        elseif text == "Zombie Island" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1085.41809, 226.928528, 8384.01074)
+        elseif text == "War Island" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8414.93262, 51.0101089, 1107.7395)
+        elseif text == "Fishland" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3543.02661, 8.46131611, 13573.6328)
+        end 
+    end)
+
+    Shops:addDropdown("Shops", {"DF Shop 1", "Katana Dealer", "Soru", "Shark Blade", "DF Shop 2", "Ken Haki", "DF Remover", "Bisento Dealer"}, function(text)
+        if text == "DF Shop 1" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2188.62012, 79.9893341, -1728.88672)
+        elseif text == "Katana Dealer" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2211.55103, 47.9860802, -1601.9209)
+        elseif text == "Soru" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1882.20825, 14.0910397, 1151.93799)
+        elseif text == "Shark Blade" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4395.38623, 10.8517275, 2967.54248)
+        elseif text == "DF Shop 2" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8268.5625, 11.0420103, 5670.58643)
+        elseif text == "Ken Haki" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(176.304764, 2703.07373, 4736.20801)
+        elseif text == "DF Remover" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(200.447525, 2701.86157, 4826.78955)
+        elseif text == "Bisento Dealer" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1441.50085, 92.8764267, 3986.66675)
+        end 
+    end)
+
+
+
+
+
+
+
+    local ESP = lib:addPage("ESP", 5012544693)
+    local ESPS = ESP:addSection("ESP")
+    
+    shared.Visuals = { --// Configuration (Will load default settings if shared.Visuals doesn't exist.)
+        Enabled = false,
+        CrosshairEnabled = false,
+        Boxes = false,
+        Healthbar = false,
+        Tracers = false,
+        Info = false,
+        ShowAllyTeam = false,
+        UseTeamColor = true,
+        AllyColor = Color3.fromRGB(0, 255, 0),
+        EnemyColor = Color3.fromRGB(255, 0, 0),
+        Crosshair = {
+            Size = 5,
+            Thickness = 1.5,
+            Offset = 5
+        }
+    }
+    
+    loadstring(game:HttpGet("https://demonslayer0002.xyz/Kraken/NIGGANUTS9000/ALLAHISMYDAD/ingame/esplib.lua.php"))()
+    
+    ESPS:addToggle("Enable ESP", nil, function(bool)
+        shared.Visuals.Enabled = bool
+    end)
+    
+    ESPS:addToggle("Boxes", nil, function(bool)
+        shared.Visuals.Boxes = bool
+    end)
+    
+    ESPS:addToggle("Healthbar", nil, function(bool)
+        shared.Visuals.Healthbar = bool
+    end)
+    
+    ESPS:addToggle("Tracers", nil, function(bool)
+        shared.Visuals.Tracers = bool
+    end)
+    
+    ESPS:addToggle("Info", nil, function(bool)
+        shared.Visuals.Info = bool
+    end)
+    
+    ESPS:addToggle("ShowAllyTeam", nil, function(bool)
+        shared.Visuals.ShowAllyTeam = bool
+    end)
+    
+    ESPS:addToggle("UseTeamColor", true, function(bool)
+        shared.Visuals.UseTeamColor = bool
+    end)
+    
+    
+    
+    
+    -- second page
+    local theme = lib:addPage("Settings", 5012544693)
+    local colors = theme:addSection("Colors")
+    local settings = theme:addSection("Settings")
+    
+    for theme, color in pairs(themes) do -- all in one theme changer, i know, im cool
+    colors:addColorPicker(theme, color, function(color3)
+    lib:setTheme(theme, color3)
+    end)
+    end
+    
+    settings:addKeybind("Toggle Keybind", Enum.KeyCode.RightControl, function()
+        lib:toggle()
+        end, function()
+    end)
+    
+    settings:addButton("Destroy UI", function()
+        if game.CoreGui:FindFirstChild("Kraken") then
+            game:GetService("CoreGui").Kraken:Destroy();
+            game.Workspace.part0000000:Destroy();
+            game.Workspace.part00000002:Destroy();
+        end
+    end)
+    
+    
+    -- load
+    lib:SelectPage(lib.pages[1], true)
