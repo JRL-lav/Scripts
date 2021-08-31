@@ -82,7 +82,7 @@ local function MakeDraggable(topbarobject, object)
 end
 
 local Discord = Instance.new("ScreenGui")
-Discord.Name = "Discord"
+syn.protect_gui(Discord)
 Discord.Parent = game.CoreGui
 Discord.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
