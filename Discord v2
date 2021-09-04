@@ -124,6 +124,17 @@ function DiscordLib:Window(text)
 	MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
 	MainFrame.Size = UDim2.new(0, 681, 0, 396)
 
+	local UISS = game:GetService("UserInputService")
+	Visible = true
+
+    UISS.InputBegan:Connect(function(Input)
+        if Input.KeyCode == Enum.KeyCode.RightControl then
+			MainFrame.Visible = not Visible
+			Visible = not Visible
+		end
+    end)
+
+
 	TopFrame.Name = "TopFrame"
 	TopFrame.Parent = MainFrame
 	TopFrame.BackgroundColor3 = Color3.fromRGB(32, 34, 37)
