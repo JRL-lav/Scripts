@@ -125,12 +125,12 @@ function DiscordLib:Window(text)
 	MainFrame.Size = UDim2.new(0, 681, 0, 396)
 
 	local UISS = game:GetService("UserInputService")
-	Visible = true
+	getgenv().Visible = true
 
     UISS.InputBegan:Connect(function(Input)
         if Input.KeyCode == Enum.KeyCode.RightControl then
-			MainFrame.Visible = not Visible
-			Visible = not Visible
+			MainFrame.Visible = not getgenv().Visible
+			getgenv().Visible = not getgenv().Visible
 		end
     end)
 
