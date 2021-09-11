@@ -886,7 +886,17 @@ local function createList(option, parent, holder)
 			self:SetValue("")
 		end
 	end
-	
+	function option:RemoveAll(value)
+		for _,label in next, content:GetChildren() do
+			if label:IsA"TextLabel"  then
+				label:Destroy()
+				valueCount = valueCount - 1
+			end
+		end
+		if self.value == value then
+			self:SetValue("")
+		end
+	end
 	function option:SetValue(value)
 		library.flags[self.flag] = tostring(value)
 		self.value = tostring(value)
