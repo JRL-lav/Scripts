@@ -142,10 +142,15 @@ local function createOptionHolder(holderTitle, parent, parentTable, subHolder)
 			BackgroundTransparency = 0,
 			Parent = parentTable.main,
 			Position = UDim2.new(0, 0, 0, 40),
-			Name = "line"
+			Name = "line",
+			BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		})
+		local grade =  library:Create("UIGradient",{
+			Name = "line",
+			Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(46, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(228, 92, 255))},
+			Parent = line
 		})
 	end
-
 	
 	
 	parentTable.content = library:Create("Frame", {
