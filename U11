@@ -564,7 +564,7 @@ local function createSlider(option, parent)
 		Size = UDim2.new(1, -20, 0, 5),
 		BackgroundTransparency = 1,
 		Image = "rbxassetid://3570695787",
-		ImageColor3 = Color3.fromRGB(30, 30, 30),
+		ImageColor3 = Color3.fromRGB(228, 92, 255),
 		ScaleType = Enum.ScaleType.Slice,
 		SliceCenter = Rect.new(100, 100, 100, 100),
 		SliceScale = 0.02,
