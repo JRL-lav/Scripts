@@ -6,7 +6,7 @@ local tweenService = game:GetService"TweenService"
 local textService = game:GetService"TextService"
 local inputService = game:GetService"UserInputService"
 
---Locals
+--Locals1
 local dragging, dragInput, dragStart, startPos, dragObject
 
 local blacklistedKeys = { --add or remove keys if you find the need to
@@ -235,7 +235,11 @@ local function createLabel(option, parent)
 		TextXAlignment = Enum.TextXAlignment.Left,
 		Parent = parent.content
 	})
-	
+	local func = {}
+
+	function func:SetText(Text)
+		main.Text = " " .. Text
+	end
 	setmetatable(option, {__newindex = function(t, i, v)
 		if i == "Text" then
 			main.Text = " " .. tostring(v)
