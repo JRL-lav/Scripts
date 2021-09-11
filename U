@@ -112,7 +112,6 @@ local function createOptionHolder(holderTitle, parent, parentTable, subHolder)
 
 	
 	local close
-	local line
 	if subHolder then
 		close = library:Create("ImageLabel", {
 			AnchorPoint = Vector2.new(0.5, 0.5),
@@ -137,19 +136,6 @@ local function createOptionHolder(holderTitle, parent, parentTable, subHolder)
 			ScaleType = Enum.ScaleType.Fit,
 			Parent = closeHolder
 		})
-		line = library:Create("Frame", {
-			Size = UDim2.new(1, 0, 0, 1),
-			BackgroundTransparency = 0,
-			Parent = parentTable.main,
-			Position = UDim2.new(0, 0, 0, 40),
-			Name = "line",
-			BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		})
-		local grade =  library:Create("UIGradient",{
-			Name = "line",
-			Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(46, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(228, 92, 255))},
-			Parent = line
-		})
 	end
 	
 	
@@ -164,6 +150,23 @@ local function createOptionHolder(holderTitle, parent, parentTable, subHolder)
 		SortOrder = Enum.SortOrder.LayoutOrder,
 		Parent = parentTable.content
 	})
+	local line
+
+	if not subHolder then
+		line = library:Create("Frame", {
+			Size = UDim2.new(1, 0, 0, 1),
+			BackgroundTransparency = 0,
+			Parent = parentTable.main,
+			Position = UDim2.new(0, 0, 0, 40),
+			Name = "line",
+			BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		})
+		local grade =  library:Create("UIGradient",{
+			Name = "line",
+			Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(46, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(228, 92, 255))},
+			Parent = line
+		})
+	end
 	
 	layout.Changed:connect(function()
 		parentTable.content.Size = UDim2.new(1, 0, 0, layout.AbsoluteContentSize.Y)
