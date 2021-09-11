@@ -112,11 +112,11 @@ local function createOptionHolder(holderTitle, parent, parentTable, subHolder)
 		local close = library:Create("ImageLabel", {
 			AnchorPoint = Vector2.new(0.5, 0.5),
 			Position = UDim2.new(0.5, 0, 0.5, 0),
-			Size = UDim2.new(0, 230, 0, 34),
+			Size = UDim2.new(2, -44, 2, -44),
 			Rotation = parentTable.open and 45 or 180,
 			BackgroundTransparency = 1,
 			Image = "rbxassetid://5289181873",
-			ImageColor3 = parentTable.open and Color3.fromRGB(143, 143, 143) or Color3.fromRGB(23, 143, 143),
+			ImageColor3 = parentTable.open and Color3.fromRGB(200, 200, 143) or Color3.fromRGB(200, 200, 143),
 			ScaleType = Enum.ScaleType.Fit,
 			Parent = closeHolder
 		})
