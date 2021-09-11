@@ -808,12 +808,6 @@ local function createList(option, parent, holder)
 				end
 			end
 		end
-		if input.UserInputType == Enum.UserInputType.MouseMovement then
-			inContact = true
-			if not option.open then
-				tweenService:Create(round, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(60, 60, 60)}):Play()
-			end
-		end
 	end)
 	
 	round.InputEnded:connect(function(input)
