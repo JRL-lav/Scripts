@@ -385,7 +385,7 @@ function createButton(option, parent)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 then
 			library.flags[option.flag] = true
 			clicking = true
-			tweenService:Create(round, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(255, 65, 65)}):Play()
+			tweenService:Create(round, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(255,255,255)}):Play()
 			option.callback()
 		end
 		if input.UserInputType == Enum.UserInputType.MouseMovement then
@@ -398,9 +398,9 @@ function createButton(option, parent)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 then
 			clicking = false
 			if inContact then
-				tweenService:Create(round, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(60, 60, 60)}):Play()
+				tweenService:Create(round, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(255,255,255)}):Play()
 			else
-				tweenService:Create(round, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(40, 40, 40)}):Play()
+				tweenService:Create(round, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(255,255,255)}):Play()
 			end
 		end
 		if input.UserInputType == Enum.UserInputType.MouseMovement then
