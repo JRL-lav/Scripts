@@ -294,7 +294,7 @@ function createToggle(option, parent)
 		SizeConstraint = Enum.SizeConstraint.RelativeYY,
 		BackgroundTransparency = 1,
 		Image = "rbxassetid://4919148038",
-		ImageColor3 = Color3.fromRGB(20, 20, 20),
+		ImageColor3 = Color3.fromRGB(46, 255, 255),
 		Parent = checkmarkHolder
 	})
 	
@@ -324,7 +324,7 @@ function createToggle(option, parent)
 		library.flags[self.flag] = state
 		self.state = state
 		checkmarkHolder:TweenSize(option.state and UDim2.new(1, -8, 1, -8) or UDim2.new(0, 0, 1, -8), "Out", "Quad", 0.2, true)
-		tweenService:Create(tickboxInner, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = state and Color3.fromRGB(46, 255, 2555) or Color3.fromRGB(20, 20, 20)}):Play()
+		tweenService:Create(tickboxInner, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = state and Color3.fromRGB(46, 255, 255) or Color3.fromRGB(20, 20, 20)}):Play()
 		if state then
 			tweenService:Create(tickboxOutline, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(46, 255, 255)}):Play()
 		else
@@ -848,6 +848,14 @@ local function createList(option, parent, holder)
 				clicking = true
 				tweenService:Create(label, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(10, 10, 10)}):Play()
 				self:SetValue(value)
+				local position = main.AbsolutePosition
+				tweenService:Create(round, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = inContact and Color3.fromRGB(60, 60, 60) or Color3.fromRGB(40, 40, 40)}):Play()
+				tweenService:Create(self.mainHolder, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageTransparency = 1, Position = UDim2.new(0, position.X - 5, 0, position.Y -10)}):Play()
+				for _,label in next, content:GetChildren() do
+					if label:IsA"TextLabel" then
+						tweenService:Create(label, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 1, TextTransparency = 1}):Play()
+					end
+				end
 			end
 			if input.UserInputType == Enum.UserInputType.MouseMovement then
 				inContact = true
