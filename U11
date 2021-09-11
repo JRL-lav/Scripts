@@ -76,10 +76,8 @@ local function createOptionHolder(holderTitle, parent, parentTable, subHolder)
 	local line = library:Create("Frame", {
 		Size = UDim2.new(1, 0, 0, 1),
 		BackgroundTransparency = 0,
-		ScaleType = Enum.ScaleType.Slice,
-		SliceCenter = Rect.new(100, 100, 100, 100),
-		SliceScale = 0.04,
-		Parent = parentTable.main
+		Parent = parentTable.main,
+		Position = UDim2.new(0, 0, 0, 40),
 	})
 
 	local round
