@@ -117,7 +117,7 @@ local function createOptionHolder(holderTitle, parent, parentTable, subHolder)
 			Rotation = parentTable.open and 45 or 180,
 			BackgroundTransparency = 1,
 			Image = "rbxassetid://3944675151",
-			ImageColor3 = parentTable.open and Color3.fromRGB(100,100,100) or Color3.fromRGB(255,255,255),
+			ImageColor3 = parentTable.open and Color3.fromRGB(50,50,50) or Color3.fromRGB(244, 157, 255),
 			ScaleType = Enum.ScaleType.Fit,
 			Parent = closeHolder
 		})
@@ -129,7 +129,7 @@ local function createOptionHolder(holderTitle, parent, parentTable, subHolder)
 			Rotation = parentTable.open and 45 or 180,
 			BackgroundTransparency = 1,
 			Image = "rbxassetid://3605017115",
-			ImageColor3 = parentTable.open and Color3.fromRGB(100,100,100) or Color3.fromRGB(255,255,255),
+			ImageColor3 = parentTable.open and Color3.fromRGB(46, 255, 255) or Color3.fromRGB(50,50,50),
 			ScaleType = Enum.ScaleType.Fit,
 			Parent = closeHolder
 		})
