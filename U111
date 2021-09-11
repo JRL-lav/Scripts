@@ -66,14 +66,22 @@ local function createOptionHolder(holderTitle, parent, parentTable, subHolder)
 		Size = UDim2.new(0, 230, 0, size),
 		BackgroundTransparency = 1,
 		Image = "rbxassetid://3570695787",
-		ImageColor3 = Color3.fromRGB(255,255,255),
+		ImageColor3 = Color3.fromRGB(20, 20, 20),
 		ScaleType = Enum.ScaleType.Slice,
 		SliceCenter = Rect.new(100, 100, 100, 100),
 		SliceScale = 0.04,
 		ClipsDescendants = true,
 		Parent = parent
 	})
-	
+	local line = library:Create("Frame", {
+		Size = UDim2.new(1, 0, 0, 1),
+		BackgroundTransparency = 0,
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.04,
+		Parent = parentTable.main
+	})
+
 	local round
 	if not subHolder then
 		round = library:Create("ImageLabel", {
@@ -108,7 +116,9 @@ local function createOptionHolder(holderTitle, parent, parentTable, subHolder)
 		Parent = title
 	})
 
+	
 	local close
+	local line
 	if subHolder then
 		close = library:Create("ImageLabel", {
 			AnchorPoint = Vector2.new(0.5, 0.5),
@@ -122,6 +132,7 @@ local function createOptionHolder(holderTitle, parent, parentTable, subHolder)
 			Parent = closeHolder
 		})
 	else 
+		
 		close = library:Create("ImageLabel", {
 			AnchorPoint = Vector2.new(0.5, 0.5),
 			Position = UDim2.new(0.5, 0, 0.5, 0),
@@ -184,6 +195,7 @@ local function createOptionHolder(holderTitle, parent, parentTable, subHolder)
 				tweenService:Create(close, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Rotation = parentTable.open and 45 or 180, ImageColor3 = parentTable.open and  Color3.fromRGB(50,50,50) or Color3.fromRGB(244, 157, 255)}):Play()
 			else 
 				tweenService:Create(close, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Rotation = parentTable.open and 45 or 180, ImageColor3 = parentTable.open and Color3.fromRGB(46, 255, 255) or Color3.fromRGB(50,50,50)}):Play()
+
 			end
 			if subHolder then
 				tweenService:Create(title, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = parentTable.open and Color3.fromRGB(16, 16, 16) or Color3.fromRGB(10, 10, 10)}):Play()
@@ -1641,7 +1653,7 @@ function library:Init()
 	self.cursor = self.cursor or self:Create("Frame", {
 		ZIndex = 100,
 		AnchorPoint = Vector2.new(0, 0),
-		Size = UDim2.new(0, 5, 0, 5),
+		Size = UDim2.new(0, 0, 0, 0),
 		BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 		Parent = self.base
 	})
