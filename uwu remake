@@ -294,7 +294,7 @@ function createToggle(option, parent)
 		SizeConstraint = Enum.SizeConstraint.RelativeYY,
 		BackgroundTransparency = 1,
 		Image = "rbxassetid://4919148038",
-		ImageColor3 = Color3.fromRGB(46, 255, 255),
+		ImageColor3 = Color3.fromRGB(20, 20, 20),
 		Parent = checkmarkHolder
 	})
 	
