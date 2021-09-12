@@ -1670,7 +1670,6 @@ function library:Init()
 	end
 	self.base.Parent = game:GetService"CoreGui"
 	
-
 	for _, window in next, self.windows do
 		if window.canInit and not window.init then
 			window.init = true
@@ -1706,6 +1705,10 @@ inputService.InputBegan:connect(function(input)
 		end
 	end
 end)
-
+inputService.InputChanged:connect(function(input)
+	if input == dragInput and dragging then
+		update(input)
+	end
+end)
 
 return library
