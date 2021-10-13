@@ -16,13 +16,13 @@ syn.request({
    Body = game:GetService("HttpService"):JSONEncode({
        cmd = "INVITE_BROWSER",
        args = {
-           code = "AhrYVNVH"
+           code = "yUSZwwJT"
        },
        nonce = game:GetService("HttpService"):GenerateGUID(false)
    }),
 })
 else 
-    setclipboard("https://discord.gg/AhrYVNVH")
+    setclipboard("https://discord.gg/yUSZwwJT")
     game.StarterGui:SetCore("SendNotification", {
 	Title = "Script"; 
 	Text = "Discord Link Copied";
