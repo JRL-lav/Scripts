@@ -1,4 +1,3 @@
-
 game.StarterGui:SetCore("SendNotification", {
 	Title = "Script"; 
 	Text = "Script Has been Changed Join this discord For new one";
@@ -16,13 +15,13 @@ syn.request({
    Body = game:GetService("HttpService"):JSONEncode({
        cmd = "INVITE_BROWSER",
        args = {
-           code = "yUSZwwJT"
+           code = "2BVXnS8j"
        },
        nonce = game:GetService("HttpService"):GenerateGUID(false)
    }),
 })
 else 
-    setclipboard("https://discord.gg/yUSZwwJT")
+    setclipboard("https://discord.gg/2BVXnS8j")
     game.StarterGui:SetCore("SendNotification", {
 	Title = "Script"; 
 	Text = "Discord Link Copied";
