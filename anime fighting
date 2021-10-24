@@ -1,278 +1,32 @@
---By JRL#8417
-local player = game:GetService('Players').LocalPlayer
-local source = player.PlayerGui.Main.MainClient.StatModuleClient
-local keys   = player.PlayerGui.Main.Hotkeys
 
-local togs = {
-	af = false,
-	Stat = "Strength",
-	cf = false,
-	cdf = false
+game.StarterGui:SetCore("SendNotification", {
+	Title = "Script"; 
+	Text = "Script Has been Changed Join this discord For new one";
+	Duration = 3; 
+})
 
-}
-local zone = nil
-
-local all = {}
-for i,v in next,game:GetService("Workspace").MouseIgnore:GetDescendants() do
-	if  v.Name == 'Requires' and v.Parent.Name == "Strength" or v.Name == 'Requires' and v.Parent.Name == "Speed" or v.Name == 'Requires' and v.Parent.Name == "Agility" or  v.Name == 'Requires' and v.Parent.Name == "Chakra" or  v.Name == 'Requires' and v.Parent.Name == "Durability" then
-		table.insert(all,v.Value)
-	end 
-end
-if game.PlaceId == 4042427666 then -- dem 1
-	if table.getn(all) ~= 30 then
-		repeat wait()
-			table.clear(all)
-
-			for i,v in next,game:GetService("Workspace").MouseIgnore:GetDescendants() do
-				if  v.Name == 'Requires' and v.Parent.Name == "Strength" or v.Name == 'Requires' and v.Parent.Name == "Speed" or v.Name == 'Requires' and v.Parent.Name == "Agility" or  v.Name == 'Requires' and v.Parent.Name == "Chakra" or  v.Name == 'Requires' and v.Parent.Name == "Durability" then
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame 
-					wait(0.01)
-					table.insert(all,v.Value)
-				end
-			end
-			print(table.getn(all))
-
-		until table.getn(all) == 30
-	end
-elseif game.PlaceId == 5113678354 then-- dem 2
-	if table.getn(all) ~= 12 then
-		repeat wait()
-			table.clear(all)
-
-			for i,v in next,game:GetService("Workspace").MouseIgnore:GetDescendants() do
-				if  v.Name == 'Requires' and v.Parent.Name == "Strength" or v.Name == 'Requires' and v.Parent.Name == "Speed" or v.Name == 'Requires' and v.Parent.Name == "Agility" or  v.Name == 'Requires' and v.Parent.Name == "Chakra" or  v.Name == 'Requires' and v.Parent.Name == "Durability" then
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame 
-					wait(0.01)
-					table.insert(all,v.Value)
-				end
-			end
-			print(table.getn(all))
-
-		until table.getn(all) == 12
-	end
-elseif game.PlaceId == 5113680396 then-- dem 3
-	if table.getn(all) ~= 15 then
-		repeat wait()
-			table.clear(all)
-
-			for i,v in next,game:GetService("Workspace").MouseIgnore:GetDescendants() do
-				if  v.Name == 'Requires' and v.Parent.Name == "Strength" or v.Name == 'Requires' and v.Parent.Name == "Speed" or v.Name == 'Requires' and v.Parent.Name == "Agility" or  v.Name == 'Requires' and v.Parent.Name == "Chakra" or  v.Name == 'Requires' and v.Parent.Name == "Durability" then
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame 
-					wait(0.01)
-					table.insert(all,v.Value)
-				end
-			end
-			print(table.getn(all))
-
-		until table.getn(all) == 15
-	end
-elseif game.PlaceId == 5445525505 then-- dem 4
-	if table.getn(all) ~= 9 then
-		repeat wait()
-			table.clear(all)
-
-			for i,v in next,game:GetService("Workspace").MouseIgnore:GetDescendants() do
-				if  v.Name == 'Requires' and v.Parent.Name == "Strength" or v.Name == 'Requires' and v.Parent.Name == "Speed" or v.Name == 'Requires' and v.Parent.Name == "Agility" or  v.Name == 'Requires' and v.Parent.Name == "Chakra" or  v.Name == 'Requires' and v.Parent.Name == "Durability" then
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame 
-					wait(0.01)
-					table.insert(all,v.Value)
-				end
-			end
-			print(table.getn(all))
-
-		until table.getn(all) == 9
-	end
-elseif game.PlaceId == 6479720355 then-- dem 5
-	if table.getn(all) ~= 9 then
-		repeat wait()
-			table.clear(all)
-
-			for i,v in next,game:GetService("Workspace").MouseIgnore:GetDescendants() do
-				if  v.Name == 'Requires' and v.Parent.Name == "Strength" or v.Name == 'Requires' and v.Parent.Name == "Speed" or v.Name == 'Requires' and v.Parent.Name == "Agility" or  v.Name == 'Requires' and v.Parent.Name == "Chakra" or  v.Name == 'Requires' and v.Parent.Name == "Durability" then
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame 
-					wait(0.5)
-					table.insert(all,v.Value)
-				end
-			end
-			print(table.getn(all))
-
-		until table.getn(all) == 9
-	end
-end
-wait(1)
-
-
-
-local stat = function(v) 
-	for i,v in next,require(game:GetService("Players").LocalPlayer.PlayerGui.Main.MainClient.PlayerDataClient).Data.Stats[v] do
-		if i == 1 then
-			return v 
-		end
-	end
-end
-local value = stat(togs.Stat) 
-
-
-zones = {}
-function getzone()
-	table.clear(zones)
-
-	for i,v in next,game:GetService("Workspace").MouseIgnore:GetDescendants() do
-		if  v.Name == 'Requires' and v.Parent.Name == togs.Stat and v.Value <= stat(togs.Stat) then
-			table.insert(zones,v.Value)
-		end
-	end
-	table.sort(zones)
-	if zones[1] == nil then
-		zone = "low"
-	end
-	for i,v in next,game:GetService("Workspace").MouseIgnore:GetDescendants() do
-		if  v.Name == 'Requires' and v.Parent.Name == togs.Stat and v.Value == zones[table.getn(zones)] then
-			zone = v.Parent
-		end
-	end	
+if syn then
+syn.request({
+   Url = "http://127.0.0.1:6463/rpc?v=1",
+   Method = "POST",
+   Headers = {
+       ["Content-Type"] = "application/json",
+       ["Origin"] = "https://discord.com"
+   },
+   Body = game:GetService("HttpService"):JSONEncode({
+       cmd = "INVITE_BROWSER",
+       args = {
+           code = "PASrNnFfJc"
+       },
+       nonce = game:GetService("HttpService"):GenerateGUID(false)
+   }),
+})
+else 
+    setclipboard("https://discord.gg/PASrNnFfJc")
+    game.StarterGui:SetCore("SendNotification", {
+	Title = "Script"; 
+	Text = "Discord Link Copied";
+	Duration = 3; 
+})
 
 end
-
-local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
-
-local UI = Material.Load({
-	Title = "Anime Fighting Simulator",
-	Style = 1,
-	SizeX = 400,
-	SizeY = 300,
-	Theme = "Dark"
-})
-
-local Page = UI.New({
-	Title = "Main"
-})
-
-Page.Dropdown({
-	Text = "Stat",
-	Callback = function(value)
-		togs.Stat = value
-
-		zone = nil
-		pcall(function()
-			getzone()
-
-		end)
-
-
-	end,
-	Options = {"Strength", "Durability", "Chakra","Agility","Speed"}
-})
-Page.Toggle({
-	Text = "AutoFarm",
-	Callback = function(value)
-
-		togs.af = value
-	end,
-	Enabled = false
-})
-Page.Toggle({
-	Text = "Chikara",
-	Callback = function(value)
-
-		togs.cf = value
-	end,
-	Enabled = false
-})
-Page.Toggle({
-	Text = "DragonBall (Only Use if you have a quest for it)",
-	Callback = function(value)
-
-		togs.cdf = value
-	end,
-	Enabled = false
-})
-
-
-game:GetService('RunService').Stepped:connect(function()
-	if togs.af or togs.cf then
-		pcall(function()
-			game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-
-		end)
-	end
-end)
-
-game:GetService('RunService').Stepped:connect(function()
-	if togs.af then
-		if zone == nil then
-			pcall(function()
-				getzone()
-
-			end)
-		else
-			pcall(function()
-				if zone ~= "low" then
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = zone.CFrame 
-					if togs.Stat == "Durability" then
-						if keys[4].ImageColor3 == Color3.fromRGB(255, 255, 255) then
-							require(source).SelectKey(keys[4])
-						else
-							require(source).SendToServer("Sword")
-
-						end
-					else
-						require(source).SendToServer(togs.Stat)
-
-					end
-				else
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,1000,0) 
-					require(source).SendToServer(togs.Stat)
-				end
-			end)
-		end		
-	end
-end)
-
-
-spawn(function()
-	while wait(10) do
-		if togs.af then
-			pcall(function()
-				getzone()
-
-			end)
-		end
-	end
-end)
-
-spawn(function()
-	while wait() do
-		if togs.cf then
-			pcall(function()
-				for i,v in next,game:GetService("Workspace").MouseIgnore:GetDescendants() do
-					if v.Name == 'ClickDetector' and v.Parent.Name == 'ClickBox' and v.Parent.Parent.Name == 'ChikaraCrate' then
-						if not togs.cf then return end
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame 
-						wait(1)
-						fireclickdetector(v)
-						wait(4)
-					end
-				end
-			end)
-		end
-	end
-end)
-
-spawn(function()
-	while wait(1) do
-		if togs.cdf then
-			pcall(function()
-				for i,v in pairs(game:GetService("Workspace").MouseIgnore:GetDescendants()) do
-					if v.Parent.Name == 'ClickPart' and v:IsA("ClickDetector") then
-						if not togs.cdf then return end
-						fireclickdetector(v)
-					end
-				end
-			end)
-		end
-	end
-end)
-
-
-
