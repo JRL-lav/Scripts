@@ -1,5 +1,1731 @@
+local library = {flags = {}, windows = {}, open = true}
 
---[[
-AztupBrew(Fork of IronBrew2): obfuscation; Version 2.7.2
-]]
-return(function(i,o,p)local k=string.char;local e=string.sub;local m=table.concat;local q=math.ldexp;local s=getfenv or function()return _ENV end;local l=select;local f=unpack or table.unpack;local j=tonumber;local function n(h)local b,c,f="","",{}local g=256;local d={}for a=0,g-1 do d[a]=k(a)end;local a=1;local function i()local b=j(e(h,a,a),36)a=a+1;local c=j(e(h,a,a+b-1),36)a=a+b;return c end;b=k(i())f[1]=b;while a<#h do local a=i()if d[a]then c=d[a]else c=b..e(b,1,1)end;d[g]=b..e(c,1,1)f[#f+1],b,g=c,c,g+1 end;return table.concat(f)end;local h=n('21F22Q27522Q22V2761I11131E1E22Q22W2761E1D13161H1M1G1B1C1522Q22U27615131F1722Q22T2762161M1M1I211171M22Q21A2761A2831I1H22G2252251G131L224151B1M1A1N101N1H171G111D1C1M1728Z22428X1F2252111G172912122911D22521G2911R1Q22721J21722721A1B1028J1G1R2251F1327P2251H1D1N28W172241E1N1322Q22P2761C171L27727629F1C29H22R2751Y25Y25925Q2401Z2AD2751I29V1G1H27F2762861M21D28V1K1B1127Y22Z27621H1D1G191H2AS2B422Q22X281131G1K1727M13101E27Y2BG2752AY1X1A1B1E162981C22Q23027621027P162C42AU1M2BU2BW1622Q22S27621227W131527Y27827521G27C1N172AI2762761Y2AW2752CA2BX1Z1616172CC2802CW28Y2AA1128827G2751W131119151G29Z1C2CC2CE2D527I1G22927Z276142DH1F21C2111W2CR2CS22I2CU27T2BS27I1L2DY2CS2752DL22Q1Z112B428Z2E627521Y2CU23327629N1528C1X28Y27N1327M2EF22Q22E2CU2322CF2BI192EO28Z28J2ES2E722Q2262CU2B627521I171Q2C91D2DN2EF23M1D2CU2CL22Q2971B27L22Q22Y2761M1D27M27O27Q2AQ22Q2191L2AA1G2DQ27521E1E131R28V2AV2BR2891D27B1E2G62G828V27S27621827W27Y2C22DB2ER2B32F11M29V2G222Q23727621D1I1E28O2901G2GT2GV2GJ2312C32BW2H42H627P2GJ2GP22Q21D2GU2DE2HD2GW2362CF2DH1I1I28V2HL2GJ2E222Q21I2982CK2FS2BN2BP2GK275142C52CD27627P28U1G2882D422Q27K1621E2CI27Y2HV21B2GV2CR21E24P21J2AN2AP2DA2IE2D02B02D81B28Y2G422Q2102BI1F27P27R2F92IU1621I1D15152I22J71Z1N2FT21U2J21G1F22Q2EX2752JG2JI29B1I2FU28O2BF2762IF2122HP161D2G12FY21928P2GJ2JO22Q1A2BI2BK27M21U132A02A62IT21C1N1C2B02BJ2B327Y2ID2HI172HQ2D22J028X1C2D72882FL2BC28K2C02IK1B1H1122Q2J72102KK2D81D2I92L82JX2IV2H22D12G32J721H27C192H0299162ET22A1Y2ET21N2F82LG161W2JH2FT2C02HN2FA172BP2JT2IB21U2JA21U2DC28U2JW2752LA27D2MC27O2EM2D92LY215171R102I62HG2JA2JC2BP21U2MO2MQ2I62HV2131C1N2JM2ID2MY2EO2D12JN27621C1B2ML2GT2DH27E2GC1W1R21U21421C21A21T22I22E22B22D2CV2HH2M6172D82IH2CJ2FY2AS2CJ1H2ET24222L22P2CR2342252762DY22O22722Q2ET22J27622O2OG22Q2342CS2OK2752ON2OL2A827521U2752AI2AI27T2OR2A82FL2OC2A72F52OO2F52AI2OK2OV2OL2E82OM2752OK2ID23422M2P42FR2OJ2OS22Q2OK2OA2PN2LF2OQ22K2P42OT22Q2PA2A82A827G2OR2782GC2762P12PQ2PX2P42EX2Q72A82EJ2Q42I32P627527T2HV2F62OL2PP2802J721U2BG2FR2CE2QC2NT2FR2J722Q2HN2ID2B622U22I27621Y2OL2QO2NA2BG2C22PH2C122Q2H92PL2EX2C22OK22S21D2NA2R32DY2R02R22R421X2R62RB22Q22A2162NA2HN2GY22S2212DQ23J2OL2OK2RM2752S12AI21U2RP2802CE2ON2R52802802352CD2LX2OX2PB2202762E92NA2QM2PB23A2FY2E82RZ2OK23E2S227S2R12752SW2CR22A2PQ2PC2342AP2A823B2762QA22Q2382PD2GK2392762Q122Q2TG2OQ2PC2TK2CS2A82CE2OK2M42OK2SR2A82P022Q2T92OU2752PY2TC2TE27T23F2TH2PI2782U52OQ2142I72U92TO2I72TR2PE22Q2SW2TV2U02TX2TA2UL2A82TD2OR27T23D2TH2752782UT2TL2I72UX2UE2TQ2QW2UH23C2P42T62P42TY2PW2UO2U22UR22Q2S12UY2782VF2TE2CE2VI2QD2V22TS22Q23I2V62UL2V92TB2UQ2QG22Q23H2U62AD2VY2UA2I72W12V12PQ2VO23G2VR2V82UN2PU2VC2VW21V2UU2AD2WF2UY2CE2WI2W52UG2Q62P42TJ2WC2OQ2OB27T2J72342PT2782PV2PA2782782Q02752802Q32UV2DQ2P92X727821S2VA2AD2782QC2X72SN2VW2PC2QI1D2QK2OB2B621T2TA2VY27G2FR2R32PA27G27G2M42752B62OK2PO27527G2WZ2Y42AW21Z2XD2XX22Q21W2YA2AW2RP2DL2B62XM2AI27G2S422Q2YJ2MG2PJ2SM2RZ27T2CC2P82SY2762YU2752T32QI27521L2XE2WG2CE2222WG2802232WG2FR2SL2UY2B62RZ2UY27G2262F52X22QK2PI2Z62CS2122DQ2DY2R92FR2OF2CF2PR2TH2OB27G2WV2PT2BG2Y62JW2BG2X322Q2EJ2X62JW2EJ2X931052NA2PA2BG2BG2XG2JW2K82762IT2EX2QI26W2XN2RR2QN2BG2HN2C22QS2V32GY2762HN2RC2GX2YW27526Y310R2SR2242TA2R32SR2SR2OB2762T92HV2PA2TD2SG2RP2762SR2TD2RG2752SR31162SJ2YM311S2OM2OB31182TA2RP311C2RS2YP311G311Z2U2311K2752EX311N2OL2RY2RR26M2SX2YM312E2AI312C27G26D312F2SZ22Q312L2S731062OL22B2OM2UT2EX2282WG2EJ2DP2E727G310C2XD312R22E2TE2EJ22F2F5310I2WO2RQ22C2TE2C22NT2E72H9311222S2CU2HN2OK2SJ22Q2ZD2ZX2NA2EX2HN312Q313D2OM2PI2C2312N22Q2ZQ2H92DY313L2V32A8313P313R2ID313T2V3313W2EX2BG2OI2R92C22Z72C32RR2FL31462HN27T31492SM2CS2EX313U2R42BG314F22Q314H313Z22Q2ZV2YP2H92HV314O2AD314R2752PK2752ZJ314V2S731282AW31362OR2C222G2F52RE2T42752EJ2XG2PA2C22EX313E2OR2HN22H2F52GY310Z2SH2PD2CE315931082CS21N2RA2ON2AI315J2WP2XD2C22C231072HN2PI2E72C2313N316E2RA22N316N2C22PT315728031652QV315N313V311W2RA22L2SM2CU2H92FR2AI2CL313R2QV313R315B313Q2QD276314A2CS313R2SN31392RF310R2C231712E831732LF3165310J315Y317K315F2RA2AI312T315W22Q2CU2UY2GY31302CS2C22GY310D2H92C2315I2752GY2AP313I3113310D311122Q1W2TE2ON1X2VZ2SG2ZQ2OQ2PI2SR318Q313Y2UM2132OJ2OF2TD2IT2RV2U2313W318I210318V2ON211317222Q2SG2BG31652PV31922SG31942RR31962R92ON2RU2PE2OF2SG310L2S12HN319H2XD318I217318L22Q2UB2UY2SG2152WB2SG2SG28A2PA31A522Q21B31622SR2EJ31652E6314V2SR319I2H9319K2PI2ON218318Y319B2RA276316L31AQ317V316Y2192XD316A22Q21E31AY2PD274276319U2E7319T2PB2CS2E631122P22HV27V27X2NU2AY2KM2B22BE2ID2EO2982111N1B2FY2AF29H2J029B2FV1D1R315B2342OR31B92PA2P62OR2OK319F2P6310D2CS27T31C42762P22UH2ET2ET2PC31CE2792AT2GB2AX2872CX2BY2912NA2752LM28O2102B931CQ2I72752CG29U2CJ31CI2FK2AE2CO1731C22343171313P2QF2WB2Y2315O2PQ31C831B92A82QI31442PW2BG2CE2WY318V2FR2HV2R92B62P2311P2Y12CD2Y92QR2OL2OY312N31AE31142RR2S72YG2AD27T2RT2I731DQ2CD2RZ312I312M314S31CH2P32P52OP2Y72P531BA31EM2F531EO2NU31EQ31B931CI31DH319131EQ2DY31EY31EU31F02P531F231EQ31F431EW31ES2E62E62FL27A27C1E314B314B2SM2RI2PC2RL312N3164316Z2OW31AP2ET313931CG2P731ER2X431CB27U2GN2J02GH2G92AU2MF2GD2GF31G32GJ2J72BU2BI2DD2H42FQ2812N4131C2LD2CC2GC31GC27Q172HI132902ET21W1Y2WV2J72DY31CD2UH31H02P431H231CC2ZK2XD2CS2SB2UH31FJ2PL31EL2P5310J2HV1L29V2KZ31CL1B31G531BE31G12IT31BI2B12KO2ZX2B82BA2L12BE2GC2162KB2BL2GU2BO2BQ31CO2C92BV2BX2BZ31AR2J12C52C727M31CZ2E931D22II2UM2MG31IC31HL31IE31I716219141X2G71H2AV2HV2IH2IB2QE2GM31BG31FE2GF1E2OI2WS31ES22Q31AO31FR2RG2Y92X7311T312N27831E42762R12CR31HB31E02762B631JE31JN2OL2YM31FR2PP2UH2PS2PM2TZ31E32GK2TW31CF2PM310D2SJ2CE2PA2SJ314B2YV31EW2S32CS3139316B2OB27831EO2R52CE27T2D42NT2CE314B2HN2FL2802YM2DP313W310031GG2R92EX2QV2OK27G2EX31JB2AW2W831JP27531L631E7312X31KV2LF2Q02PI314Y2PL31L22PQ2RH2AW31LB2762YM31LM2S82AW2B62JO2X531B922S313627G31LM2BG31LO2PB28031F022S2Y927G31EH31JR312N31M831M131KF2AW2XG31462GC2OY27531782CS318N31JV2CW317D31MO2XJ275313927G313O311Q31GG31H82RZ2782T12PQ2YM31N1312C275319U2S3312N319U31JS31B931J72DY2W42QE31BF2KP27631G931G52GC21A2GE27C31NK2ZX31GC28J2D82GJ2XZ21631GI31GK2FO21C1D1D1M31IX2882E91X21028J31BG2V92C42DJ31ID31I62CB31IQ31IS2ER31IV31NJ2BI2882PV2AA2E531F12F52EH2QE31HH28O22R26W26Z31P031P024R317131HP28731BJ31HS316121C2KS2H227B290162HI2B931II2E92132BK28Z2AV2ID31HZ2BJ31I12NU2C731GQ2B128V31OY31P131P0263317131FE31CM31MX22Q2N21M28O1B2BL31G62BT31IO31I92V92122L52GU1C2B431O91D1F31NS31GE2GJ315B21E2JU31Q728Y2ET2EV2ZX2171C31PL2FT29R31D031B02B31921J1I31662G52G72B431IP10182NX1M2AV2HG31OD2C631IM31OG2BX22R22931RR31RS24X31712SR2D528Z2H71G31QZ2H431GE2IY1C1A2TH21R31ES31H231CA2QD31H431H731CK31J72XD31K82TE2A8317B31FR2A831K4312B2TE311P31JY31DG2B62TW2IT2VD2GC2TI31F52OK31KH31ER2YV2XZ2I7316B314T2WG2AI310J2P631T731S92F52R82UH31122E731DG31H22HN31H22GY31TN31SE2UY31MN31EN2QK31T82UY2AI2SG31TT31TD31MW2E731DD31K72OL2T931U42AI2TD2P331EU31ET2QE22Q2PI31MD31JG2TA2W82X1313C31UK2A82X02AD2TG2PA31KS2UI2CS2782802OK2YD2AD31LM2U531MC31E731UF316Z31UH2OU21H2Z431TG2DQ31TI2X731UW2XD31UK31TM2XA22Q2V531UO2UW31VF2AD31C22DQ2Z12AD316U31EG2762ZA2YV2YM31VW31FY31MN31LK2752YY2QG312N2YY31JU31CT2OM318X31TA31F831TU31TE31TJ31TQ31H32F531H52E72P231U331FR2AI2VQ31U72VE2UE31DJ2AI31SN31SH2OL2802TW31SL31K331WX31EI31T531FP31VP2K82OR2AI2W831TZ2TE31FR31JY318531SQ2RR31TT31SB27531VH2E731VK2F52VY31H231VP31MV31SS2PQ31WQ2UH2OK2VL27T31DJ31KC31EW31MD315G318R2OL31TY31MS31HC31FW2P52V931OV31HI2ET24Y31Q131HK31HM31G031BG31P52AZ31HR2BE2LL2B92BB2BD31I427531PP2KC31I22I22GC31QC2CB31I931RK31IL2C831IF2EY31D327Y31OC31Z631IN31OH31IR31IT31OL2G531ON31G22G731G431CN27531NN31G831ZM2GJ31QF31QH31GJ31QK2DT31QO31NU2G331QR31QT31S42LV2CU31P931PB2B331GS2D231PG28J2O031PJ31R131PN2BH31PQ27M31PS31HL31PU31PQ1G318131FQ31B92R931KA27531AX31XX31JM31FM31M931EK31E731DC31W02E731M5310M31JZ2YM27G31JH31ER31W82PV2WW31JR2WB2SJ2782TW2XI31X231WR28031WR317B320U31TT2QI31V42PP31DR2OU31DP2GK2PK31KN2J02V331KR31E7315L31LC2B631SU31LF31EV31L12NA31L427G2VY31L72VX3210275322631DO31LR2JW31KY31W92PQ31LI2RG2RI27G322L31W5276322L2PP2YL2TA31192YB2EJ2XW2AW2C2323627G2H92PA31KZ322O275315T315M2RA310D314U2V3321731L32YC2Y72T32AI2GY2YM323Q3225310R323131V72AW27G321J315G31VP2Y7323N323931AQ32462SR32482YE27G31YD323D31312NA312I31MZ22Q2U531VX312N324K31VU31MW324L311M322J31SG31NC31H831FZ27531NH31ZL2GI31NL2EK31NO2GG31ZS2LK27631ZZ31GF315B31NX29U31NZ2CC2LL2LN2LP2D22PG31E631GZ31WO313C2SJ31UN325M31WK321I323L31EI31F631J7319131HN31BG2ID31NK31ZO31G731NP325531NR2KA31NT31GF31NW31NY31GL31O131O331O531R431O831OA2IJ2AX27O2CC31OP2AB31EY2ET23A1Y316123431A331XE31WH31XK31WI2E731WK31UU31FX321H31WY31X32I731C631R42PA31DG2FR2TW2WV2VW31SW2X72QV2UH31T22P331T4324V31HD2F531TI315B31QZ2BM31QJ27Y326N2AC2IT31QS27P1M2EL28C31NG31G132603255326231ZQ32643250326631GD32002QE2161727K2NU1W2MK28C2AA31IU31RQ31RS31RR31RU2FY21C31GJ31D42F52LW31Q4328231Q72FX31BM2KA31GP2D32762KW2KY31DA3161325L31WG31X9316D3278311H320X278327A31LJ2XD31DG321O320X31X131DG2T331JQ27G329S275314X2TE31MI31JY2SJ3235325M3238325M2H92OE316D2762EX31WV324U31NC2DY31HF31YL27Y315B32902J52ZX21I1B27X31IQ2CG1R31Q422B22E22G22A22A32AV2T32E931CX152N22LR2CS26A26D24H2CU2IT328K2ND328M2BL2O42P5317P2DM31CY2B92982IX31QV31OZ31PY31Q02NU21D31GS2KG31QU2C02FL1W27I31QM31QY28Z2911H28O1R31U92OM316P326W31SA31222QD2OZ327332CB329V2AD31H931WF2P632CH280327C32CF31UC31H22B632CM2AW31VP329C2P632CR32CC329W32CU32CP31WG31H22EX32CH2EJ31F5326P324V2752FT2MV172QI31JL2R531FX31FU2PQ327O31Y331OS2P5');local a=(bit or bit32);local d=a and a.bxor or function(a,b)local c,d,e=1,0,10 while a>0 and b>0 do local f,e=a%2,b%2 if f~=e then d=d+c end a,b,c=(a-f)/2,(b-e)/2,c*2 end if a<b then a=b end while a>0 do local b=a%2 if b>0 then d=d+c end a,c=(a-b)/2,c*2 end return d end local function c(b,a,c)if c then local a=(b/2^(a-1))%2^((c-1)-(a-1)+1);return a-a%1;else local a=2^(a-1);return(b%(a+a)>=a)and 1 or 0;end;end;local a=1;local function b()local c,e,f,b=i(h,a,a+3);c=d(c,98)e=d(e,98)f=d(f,98)b=d(b,98)a=a+4;return(b*16777216)+(f*65536)+(e*256)+c;end;local function j()local b=d(i(h,a,a),98);a=a+1;return b;end;local function g()local b,c=i(h,a,a+2);b=d(b,98)c=d(c,98)a=a+2;return(c*256)+b;end;local function n()local d=b();local a=b();local e=1;local d=(c(a,1,20)*(2^32))+d;local b=c(a,21,31);local a=((-1)^c(a,32));if(b==0)then if(d==0)then return a*0;else b=1;e=0;end;elseif(b==2047)then return(d==0)and(a*(1/0))or(a*(0/0));end;return q(a,b-1023)*(e+(d/(2^52)));end;local q=b;local function r(b)local c;if(not b)then b=q();if(b==0)then return'';end;end;c=e(h,a,a+b-1);a=a+b;local b={}for a=1,#c do b[a]=k(d(i(e(c,a,a)),98))end return m(b);end;local a=b;local function q(...)return{...},l('#',...)end local function h()local i={};local l={};local a={};local k={[#{{681;555;227;440};{174;391;33;245};}]=l,[#{"1 + 1 = 111";{788;525;644;598};{554;301;375;869};}]=nil,[#{{905;993;29;909};"1 + 1 = 111";"1 + 1 = 111";{559;636;505;173};}]=a,[#{"1 + 1 = 111";}]=i,};local a=b()local e={}for c=1,a do local b=j();local a;if(b==2)then a=(j()~=0);elseif(b==1)then a=n();elseif(b==0)then a=r();end;e[c]=a;end;for h=1,b()do local a=j();if(c(a,1,1)==0)then local d=c(a,2,3);local f=c(a,4,6);local a={g(),g(),nil,nil};if(d==0)then a[3]=g();a[4]=g();elseif(d==1)then a[3]=b();elseif(d==2)then a[3]=b()-(2^16)elseif(d==3)then a[3]=b()-(2^16)a[4]=g();end;if(c(f,1,1)==1)then a[2]=e[a[2]]end if(c(f,2,2)==1)then a[3]=e[a[3]]end if(c(f,3,3)==1)then a[4]=e[a[4]]end i[h]=a;end end;k[3]=j();for a=1,b()do l[a-1]=h();end;return k;end;local function m(a,j,g)a=(a==true and h())or a;return(function(...)local d=a[1];local e=a[3];local n=a[2];local k=q local b=1;local h=-1;local r={};local i={...};local q=l('#',...)-1;local l={};local c={};for a=0,q do if(a>=e)then r[a-e]=i[a+1];else c[a]=i[a+#{"1 + 1 = 111";}];end;end;local a=q-e+1 local a;local e;while true do a=d[b];e=a[1];if e<=47 then if e<=23 then if e<=11 then if e<=5 then if e<=2 then if e<=0 then do return end;elseif e==1 then local b=a[2]local d,a=k(c[b](f(c,b+1,a[3])))h=a+b-1 local a=0;for b=b,h do a=a+1;c[b]=d[a];end;else local b=a[2]c[b]=c[b](f(c,b+1,a[3]))end;elseif e<=3 then local a=a[2]local d,b=k(c[a](c[a+1]))h=b+a-1 local b=0;for a=a,h do b=b+1;c[a]=d[b];end;elseif e>4 then c[a[2]]=c[a[3]][a[4]];else c[a[2]][a[3]]=a[4];end;elseif e<=8 then if e<=6 then local b=a[2]local d,a=k(c[b](f(c,b+1,a[3])))h=a+b-1 local a=0;for b=b,h do a=a+1;c[b]=d[a];end;elseif e==7 then c[a[2]]=j[a[3]];else c[a[2]]=c[a[3]]*c[a[4]];end;elseif e<=9 then local h;local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];do return end;elseif e==10 then j[a[3]]=c[a[2]];else local d=a[2];local b=c[a[3]];c[d+1]=b;c[d]=b[a[4]];end;elseif e<=17 then if e<=14 then if e<=12 then local b=a[2]c[b](f(c,b+1,a[3]))elseif e==13 then c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];do return end;else local g;local e;e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=(a[3]~=0);b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];do return end;end;elseif e<=15 then local a=a[2]c[a]=c[a](c[a+1])elseif e>16 then local h;local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];else local d=a[2]local e={c[d](f(c,d+1,h))};local b=0;for a=d,a[4]do b=b+1;c[a]=e[b];end end;elseif e<=20 then if e<=18 then local h;local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];e=a[2]c[e](c[e+1])b=b+1;a=d[b];do return end;elseif e>19 then local f=a[2];local e={};for a=1,#l do local a=l[a];for b=0,#a do local b=a[b];local d=b[1];local a=b[2];if d==c and a>=f then e[a]=d[a];b[1]=e;end;end;end;else if(c[a[2]]<a[4])then b=a[3];else b=b+1;end;end;elseif e<=21 then if(c[a[2]]==c[a[4]])then b=b+1;else b=a[3];end;elseif e==22 then b=a[3];else for a=a[2],a[3]do c[a]=nil;end;end;elseif e<=35 then if e<=29 then if e<=26 then if e<=24 then c[a[2]]=c[a[3]]*c[a[4]];elseif e>25 then local a=a[2]c[a](c[a+1])else c[a[2]]=a[3];end;elseif e<=27 then local g;local e;c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];for a=a[2],a[3]do c[a]=nil;end;elseif e==28 then local a=a[2]c[a]=c[a](f(c,a+1,h))else local h;local e;e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];end;elseif e<=32 then if e<=30 then local g;local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];if(c[a[2]]<a[4])then b=a[3];else b=b+1;end;elseif e==31 then local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2]c[e]=c[e](c[e+1])b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];if(c[a[2]]==c[a[4]])then b=b+1;else b=a[3];end;else local e;local i;local l,m;local j;local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];j=c[a[3]];c[e+1]=j;c[e]=j[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];j=c[a[3]];c[e+1]=j;c[e]=j[a[4]];b=b+1;a=d[b];e=a[2]l,m=k(c[e](c[e+1]))h=m+e-1 i=0;for a=e,h do i=i+1;c[a]=l[i];end;b=b+1;a=d[b];e=a[2]l={c[e](f(c,e+1,h))};i=0;for a=e,a[4]do i=i+1;c[a]=l[i];end b=b+1;a=d[b];b=a[3];end;elseif e<=33 then local d=a[2];local f=a[4];local e=d+2 local d={c[d](c[d+1],c[e])};for a=1,f do c[e+a]=d[a];end;local d=d[1]if d then c[e]=d b=a[3];else b=b+1;end;elseif e==34 then local b=a[2];local d=c[b];for a=b+1,a[3]do o(d,c[a])end;else c[a[2]]=(a[3]~=0);end;elseif e<=41 then if e<=38 then if e<=36 then local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];if not c[a[2]]then b=b+1;else b=a[3];end;elseif e>37 then c[a[2]][a[3]]=c[a[4]];else if not c[a[2]]then b=b+1;else b=a[3];end;end;elseif e<=39 then c[a[2]]=c[a[3]][a[4]];elseif e>40 then local h=n[a[3]];local f;local e={};f=p({},{__index=function(b,a)local a=e[a];return a[1][a[2]];end,__newindex=function(c,a,b)local a=e[a]a[1][a[2]]=b;end;});for f=1,a[4]do b=b+1;local a=d[b];if a[1]==42 then e[f-1]={c,a[3]};else e[f-1]={j,a[3]};end;l[#l+1]=e;end;c[a[2]]=m(h,f,g);else local b=a[2]c[b]=c[b](f(c,b+1,a[3]))end;elseif e<=44 then if e<=42 then c[a[2]]=c[a[3]];elseif e>43 then local g;local e;e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];for a=a[2],a[3]do c[a]=nil;end;b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];for a=a[2],a[3]do c[a]=nil;end;else local d=a[2];local f=a[4];local e=d+2 local d={c[d](c[d+1],c[e])};for a=1,f do c[e+a]=d[a];end;local d=d[1]if d then c[e]=d b=a[3];else b=b+1;end;end;elseif e<=45 then c[a[2]]=m(n[a[3]],nil,g);elseif e>46 then c[a[2]]=g[a[3]];else local g;local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];if(c[a[2]]<a[4])then b=a[3];else b=b+1;end;end;elseif e<=71 then if e<=59 then if e<=53 then if e<=50 then if e<=48 then c[a[2]]={};elseif e>49 then local f=a[2];local d={};for a=1,#l do local a=l[a];for b=0,#a do local a=a[b];local e=a[1];local b=a[2];if e==c and b>=f then d[b]=e[b];a[1]=d;end;end;end;else for a=a[2],a[3]do c[a]=nil;end;end;elseif e<=51 then local b=a[2];local d=c[b];for a=b+1,a[3]do o(d,c[a])end;elseif e==52 then if(c[a[2]]==c[a[4]])then b=b+1;else b=a[3];end;else local a=a[2]c[a](c[a+1])end;elseif e<=56 then if e<=54 then local b=a[2]local e={c[b](f(c,b+1,h))};local d=0;for a=b,a[4]do d=d+1;c[a]=e[d];end elseif e==55 then local a=a[2]local d,b=k(c[a](c[a+1]))h=b+a-1 local b=0;for a=a,h do b=b+1;c[a]=d[b];end;else b=a[3];end;elseif e<=57 then local i;local m,l;local j;local e;e=a[2]c[e](c[e+1])b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];j=c[a[3]];c[e+1]=j;c[e]=j[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]m,l=k(c[e](f(c,e+1,a[3])))h=l+e-1 i=0;for a=e,h do i=i+1;c[a]=m[i];end;b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,h))b=b+1;a=d[b];e=a[2]c[e]=c[e]()b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];elseif e==58 then local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];else local g;local e;e=a[2]c[e](c[e+1])b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];end;elseif e<=65 then if e<=62 then if e<=60 then c[a[2]]=a[3];elseif e>61 then local e;local i;local l,m;local j;local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];j=c[a[3]];c[e+1]=j;c[e]=j[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];j=c[a[3]];c[e+1]=j;c[e]=j[a[4]];b=b+1;a=d[b];e=a[2]l,m=k(c[e](c[e+1]))h=m+e-1 i=0;for a=e,h do i=i+1;c[a]=l[i];end;b=b+1;a=d[b];e=a[2]l={c[e](f(c,e+1,h))};i=0;for a=e,a[4]do i=i+1;c[a]=l[i];end b=b+1;a=d[b];b=a[3];else c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];do return end;end;elseif e<=63 then local e;local i;local l,n;local m;local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=j[a[3]];b=b+1;a=d[b];e=a[2];m=c[a[3]];c[e+1]=m;c[e]=m[a[4]];b=b+1;a=d[b];e=a[2]l,n=k(c[e](c[e+1]))h=n+e-1 i=0;for a=e,h do i=i+1;c[a]=l[i];end;b=b+1;a=d[b];e=a[2]l={c[e](f(c,e+1,h))};i=0;for a=e,a[4]do i=i+1;c[a]=l[i];end b=b+1;a=d[b];b=a[3];elseif e>64 then local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];else local i=n[a[3]];local h;local e={};h=p({},{__index=function(b,a)local a=e[a];return a[1][a[2]];end,__newindex=function(c,a,b)local a=e[a]a[1][a[2]]=b;end;});for f=1,a[4]do b=b+1;local a=d[b];if a[1]==42 then e[f-1]={c,a[3]};else e[f-1]={j,a[3]};end;l[#l+1]=e;end;c[a[2]]=m(i,h,g);end;elseif e<=68 then if e<=66 then if not c[a[2]]then b=b+1;else b=a[3];end;elseif e==67 then c[a[2]]=j[a[3]];else c[a[2]]=(a[3]~=0);end;elseif e<=69 then local l;local m,n;local i;local e;c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e](c[e+1])b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=j[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]=j[a[3]];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e](c[e+1])b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]=j[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]=j[a[3]];b=b+1;a=d[b];e=a[2]m,n=k(c[e](f(c,e+1,a[3])))h=n+e-1 l=0;for a=e,h do l=l+1;c[a]=m[l];end;b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,h))elseif e==70 then c[a[2]]=c[a[3]];else c[a[2]]=m(n[a[3]],nil,g);end;elseif e<=83 then if e<=77 then if e<=74 then if e<=72 then c[a[2]][a[3]]=a[4];elseif e==73 then local d=a[2];local b=c[a[3]];c[d+1]=b;c[d]=b[a[4]];else local e;c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];end;elseif e<=75 then local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=j[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]]*c[a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];do return end;elseif e==76 then j[a[3]]=c[a[2]];else local e;e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];for a=a[2],a[3]do c[a]=nil;end;end;elseif e<=80 then if e<=78 then local a=a[2]c[a]=c[a]()elseif e>79 then local a=a[2]c[a]=c[a]()else local a=a[2]c[a]=c[a](c[a+1])end;elseif e<=81 then if c[a[2]]then b=b+1;else b=a[3];end;elseif e>82 then if c[a[2]]then b=b+1;else b=a[3];end;else c[a[2]]=g[a[3]];end;elseif e<=89 then if e<=86 then if e<=84 then local a=a[2]c[a](f(c,a+1,h))elseif e>85 then local a=a[2]c[a](f(c,a+1,h))else c[a[2]][a[3]]=c[a[4]];end;elseif e<=87 then local g;local e;e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))elseif e>88 then local h;local e;e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];else c[a[2]]={};end;elseif e<=92 then if e<=90 then do return end;elseif e==91 then local f;local e;c[a[2]]={};b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2];f=c[e];for a=e+1,a[3]do o(f,c[a])end;else local a=a[2]c[a]=c[a](f(c,a+1,h))end;elseif e<=94 then if e==93 then local e;local l;local m,n;local i;local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=j[a[3]];b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]]*c[a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e](c[e+1])b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]=j[a[3]];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e](c[e+1])b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=j[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];e=a[2]m,n=k(c[e](c[e+1]))h=n+e-1 l=0;for a=e,h do l=l+1;c[a]=m[l];end;b=b+1;a=d[b];e=a[2]m={c[e](f(c,e+1,h))};l=0;for a=e,a[4]do l=l+1;c[a]=m[l];end b=b+1;a=d[b];b=a[3];else local b=a[2]c[b](f(c,b+1,a[3]))end;elseif e>95 then local g;local e;e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))else if(c[a[2]]<a[4])then b=a[3];else b=b+1;end;end;b=b+1;end;end);end;return m(true,{},s())();end)(string.byte,table.insert,setmetatable);
+--Serviceslol
+local runService = game:GetService"RunService"
+local tweenService = game:GetService"TweenService"
+local textService = game:GetService"TextService"
+local inputService = game:GetService"UserInputService"
+
+--Locals
+local dragging, dragInput, dragStart, startPos, dragObject
+
+local blacklistedKeys = { --add or remove keys if you find the need to
+	Enum.KeyCode.Unknown,Enum.KeyCode.W,Enum.KeyCode.A,Enum.KeyCode.S,Enum.KeyCode.D,Enum.KeyCode.Slash,Enum.KeyCode.Tab,Enum.KeyCode.Backspace,Enum.KeyCode.Escape
+}
+local whitelistedMouseinputs = { --add or remove mouse inputs if you find the need to
+	Enum.UserInputType.MouseButton1,Enum.UserInputType.MouseButton2,Enum.UserInputType.MouseButton3
+}
+
+--Functions
+local function round(num, bracket)
+	bracket = bracket or 1
+	local a = math.floor(num/bracket + (math.sign(num) * 0.5)) * bracket
+	if a < 0 then
+		a = a + bracket
+	end
+	return a
+end
+
+local function keyCheck(x,x1)
+	for _,v in next, x1 do
+		if v == x then
+			return true
+		end
+	end
+end
+
+local function update(input)
+	local delta = input.Position - dragStart
+	local yPos = (startPos.Y.Offset + delta.Y) < -36 and -36 or startPos.Y.Offset + delta.Y
+	dragObject:TweenPosition(UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, yPos), "Out", "Quint", 0.1, true)
+end
+
+--From: https://devforum.roblox.com/t/how-to-create-a-simple-rainbow-effect-using-tweenService/221849/2
+local chromaColor
+local rainbowTime = 5
+spawn(function()
+	while wait() do
+		chromaColor = Color3.fromHSV(tick() % rainbowTime / rainbowTime, 1, 1)
+	end
+end)
+
+function library:Create(class, properties)
+	properties = typeof(properties) == "table" and properties or {}
+	local inst = Instance.new(class)
+	for property, value in next, properties do
+		inst[property] = value
+	end
+	return inst
+end
+
+local function createOptionHolder(holderTitle, parent, parentTable, subHolder)
+	local size = subHolder and 34 or 40
+	parentTable.main = library:Create("ImageButton", {
+		LayoutOrder = subHolder and parentTable.position or 0,
+		Position = UDim2.new(0, 20 + (250 * (parentTable.position or 0)), 0, 20),
+		Size = UDim2.new(0, 230, 0, size),
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageColor3 = Color3.fromRGB(20, 20, 20),
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.04,
+		ClipsDescendants = true,
+		Parent = parent
+	})
+
+	
+    local Corners
+    local stroke 
+    local grad
+	local round
+	if not subHolder then
+		round = library:Create("ImageLabel", {
+			Size = UDim2.new(1, 0, 0, size),
+			BackgroundTransparency = 1,
+			Image = "rbxassetid://3944675151",
+			ImageColor3 = parentTable.open and (subHolder and Color3.fromRGB(16, 16, 16) or Color3.fromRGB(10, 10, 10)) or (subHolder and Color3.fromRGB(10, 10, 10) or Color3.fromRGB(6, 6, 6)),
+			ScaleType = Enum.ScaleType.Slice,
+			SliceCenter = Rect.new(100, 100, 100, 100),
+			SliceScale = 0.04,
+			Parent = parentTable.main
+		})
+        Corners = library:Create("UICorner", {
+            Thickness = 1.2;
+            Color = Color3.fromRGB(255, 255, 255);
+            Parent = parentTable.main
+        })
+        stroke = library:Create("UICorner", {
+            CornerRadius = UDim.new(0, 6);
+            Parent = parentTable.main
+        })
+        round = library:Create("UIGradient", {
+            Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(46, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(228, 92, 255))},
+            Parent = parentTable.main
+        })
+        spawn(function()
+            while task.wait() do 
+                UIGradient.Rotation = UIGradient.Rotation + 2
+            end
+        end)
+
+	end
+	local title = library:Create("TextLabel", {
+		Size = UDim2.new(1, 0, 0, size),
+		BackgroundTransparency = subHolder and 0 or 1,
+		BackgroundColor3 = Color3.fromRGB(10, 10, 10),
+		BorderSizePixel = 0,
+		Text = holderTitle,
+		TextSize = subHolder and 16 or 17,
+		Font = Enum.Font.GothamBold,
+		TextColor3 = Color3.fromRGB(255, 255, 255),
+		Parent = parentTable.main
+	})
+	
+	local closeHolder = library:Create("Frame", {
+		Position = UDim2.new(1, 0, 0, 0),
+		Size = UDim2.new(-1, 0, 1, 0),
+		SizeConstraint = Enum.SizeConstraint.RelativeYY,
+		BackgroundTransparency = 1,
+		Parent = title
+	})
+
+	
+	local close
+	if subHolder then
+		close = library:Create("ImageLabel", {
+			AnchorPoint = Vector2.new(0.5, 0.5),
+			Position = UDim2.new(0.5, 0, 0.5, 0),
+			Size = UDim2.new(2,-size - 10, 2,-size - 10),
+			Rotation = parentTable.open and 45 or 180,
+			BackgroundTransparency = 1,
+			Image = "rbxassetid://3944675151",
+			ImageColor3 = parentTable.open and Color3.fromRGB(50,50,50) or Color3.fromRGB(244, 157, 255),
+			ScaleType = Enum.ScaleType.Fit,
+			Parent = closeHolder
+		})
+	else 
+		close = library:Create("ImageLabel", {
+			AnchorPoint = Vector2.new(0.5, 0.5),
+			Position = UDim2.new(0.5, 0, 0.5, 0),
+			Size = UDim2.new(0, 27, 0, 27),
+			Rotation = parentTable.open and 45 or 180,
+			BackgroundTransparency = 1,
+			Image = "rbxassetid://3605017115",
+			ImageColor3 = parentTable.open and Color3.fromRGB(46, 255, 255) or Color3.fromRGB(50,50,50),
+			ScaleType = Enum.ScaleType.Fit,
+			Parent = closeHolder
+		})
+	end
+	
+	
+	parentTable.content = library:Create("Frame", {
+		Position = UDim2.new(0, 0, 0, size),
+		Size = UDim2.new(1, 0, 1, -size),
+		BackgroundTransparency = 1,
+		Parent = parentTable.main
+	})
+	
+	local layout = library:Create("UIListLayout", {
+		SortOrder = Enum.SortOrder.LayoutOrder,
+		Parent = parentTable.content
+	})
+	local line
+
+	if not subHolder then
+		line = library:Create("Frame", {
+			Size = UDim2.new(1, 0, 0, 1),
+			BackgroundTransparency = 0,
+			Parent = parentTable.main,
+			Position = UDim2.new(0, 0, 0, 40),
+			Name = "line",
+			BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		})
+		local grade =  library:Create("UIGradient",{
+			Name = "line",
+			Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(46, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(228, 92, 255))},
+			Parent = line
+		})
+	end
+	
+	layout.Changed:connect(function()
+		parentTable.content.Size = UDim2.new(1, 0, 0, layout.AbsoluteContentSize.Y)
+		parentTable.main.Size = #parentTable.options > 0 and parentTable.open and UDim2.new(0, 230, 0, layout.AbsoluteContentSize.Y + size) or UDim2.new(0, 230, 0, size)
+	end)
+	
+	if not subHolder then
+		library:Create("UIPadding", {
+			Parent = parentTable.content
+		})
+		
+		title.InputBegan:connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 then
+				dragObject = parentTable.main
+				dragging = true
+				dragStart = input.Position
+				startPos = dragObject.Position
+			end
+		end)
+		title.InputChanged:connect(function(input)
+			if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+				dragInput = input
+			end
+		end)
+			title.InputEnded:connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 then
+				dragging = false
+			end
+		end)
+	end
+	
+	closeHolder.InputBegan:connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			parentTable.open = not parentTable.open
+			if subHolder then
+				tweenService:Create(close, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Rotation = parentTable.open and 45 or 180, ImageColor3 = parentTable.open and  Color3.fromRGB(50,50,50) or Color3.fromRGB(244, 157, 255)}):Play()
+			else 
+				tweenService:Create(close, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Rotation = parentTable.open and 45 or 180, ImageColor3 = parentTable.open and Color3.fromRGB(46, 255, 255) or Color3.fromRGB(50,50,50)}):Play()
+
+			end
+			if subHolder then
+				tweenService:Create(title, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = parentTable.open and Color3.fromRGB(16, 16, 16) or Color3.fromRGB(10, 10, 10)}):Play()
+			else
+				tweenService:Create(round, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = parentTable.open and Color3.fromRGB(10, 10, 10) or Color3.fromRGB(6, 6, 6)}):Play()
+			end
+			parentTable.main:TweenSize(#parentTable.options > 0 and parentTable.open and UDim2.new(0, 230, 0, layout.AbsoluteContentSize.Y + size) or UDim2.new(0, 230, 0, size), "Out", "Quad", 0.2, true)
+		end
+	end)
+
+	function parentTable:SetTitle(newTitle)
+		title.Text = tostring(newTitle)
+	end
+	
+	return parentTable
+end
+	
+local function createLabel(option, parent)
+	local main = library:Create("TextLabel", {
+		LayoutOrder = option.position,
+		Size = UDim2.new(1, 0, 0, 26),
+		BackgroundTransparency = 1,
+		Text = " " .. option.text,
+		TextSize = 17,
+		Font = Enum.Font.Gotham,
+		TextColor3 = Color3.fromRGB(255, 188, 250),
+		TextXAlignment = Enum.TextXAlignment.Left,
+		Parent = parent.content
+	})
+	local funcs = {}
+
+	function funcs:SetText(Text)
+		main.Text = " " .. Text
+	end
+	return funcs
+end
+
+function createToggle(option, parent)
+	local main = library:Create("TextLabel", {
+		LayoutOrder = option.position,
+		Size = UDim2.new(1, 0, 0, 31),
+		BackgroundTransparency = 1,
+		Text = " " .. option.text,
+		TextSize = 17,
+		Font = Enum.Font.Gotham,
+		TextColor3 = Color3.fromRGB(255, 255, 255),
+		TextXAlignment = Enum.TextXAlignment.Left,
+		Parent = parent.content
+	})
+	
+	local tickboxOutline = library:Create("ImageLabel", {
+		Position = UDim2.new(1, -6, 0, 4),
+		Size = UDim2.new(-1, 10, 1, -10),
+		SizeConstraint = Enum.SizeConstraint.RelativeYY,
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageColor3 = option.state and Color3.fromRGB(46, 255, 255) or Color3.fromRGB(100, 100, 100),
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.02,
+		Parent = main
+	})
+	
+	local tickboxInner = library:Create("ImageLabel", {
+		Position = UDim2.new(0, 2, 0, 2),
+		Size = UDim2.new(1, -4, 1, -4),
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageColor3 = option.state and Color3.fromRGB(46, 255, 255) or Color3.fromRGB(20, 20, 20),
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.02,
+		Parent = tickboxOutline
+	})
+	
+	local checkmarkHolder = library:Create("Frame", {
+		Position = UDim2.new(0, 4, 0, 4),
+		Size = option.state and UDim2.new(1, -8, 1, -8) or UDim2.new(0, 0, 1, -8),
+		BackgroundTransparency = 1,
+		ClipsDescendants = true,
+		Parent = tickboxOutline
+	})
+	
+	local checkmark = library:Create("ImageLabel", {
+		Size = UDim2.new(1, 0, 1, 0),
+		SizeConstraint = Enum.SizeConstraint.RelativeYY,
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://4919148038",
+		ImageColor3 = Color3.fromRGB(20, 20, 20),
+		Parent = checkmarkHolder
+	})
+	
+	local inContact
+	main.InputBegan:connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			option:SetState(not option.state)
+		end
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			inContact = true
+			if not option.state then
+				tweenService:Create(tickboxOutline, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(214, 214, 214)}):Play()
+			end
+		end
+	end)
+	
+	main.InputEnded:connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			inContact = true
+			if not option.state then
+				tweenService:Create(tickboxOutline, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(100, 100, 100)}):Play()
+			end
+		end
+	end)
+	
+	function option:SetState(state)
+		library.flags[self.flag] = state
+		self.state = state
+		checkmarkHolder:TweenSize(option.state and UDim2.new(1, -8, 1, -8) or UDim2.new(0, 0, 1, -8), "Out", "Quad", 0.2, true)
+		tweenService:Create(tickboxInner, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = state and Color3.fromRGB(46, 255, 255) or Color3.fromRGB(20, 20, 20)}):Play()
+		if state then
+			tweenService:Create(tickboxOutline, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(46, 255, 255)}):Play()
+		else
+			if inContact then
+				tweenService:Create(tickboxOutline, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(140, 140, 140)}):Play()
+			else
+				tweenService:Create(tickboxOutline, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(100, 100, 100)}):Play()
+			end
+		end
+		self.callback(state)
+	end
+
+	if option.state then
+		delay(1, function() option.callback(true) end)
+	end
+	
+	setmetatable(option, {__newindex = function(t, i, v)
+		if i == "Text" then
+			main.Text = " " .. tostring(v)
+		end
+	end})
+end
+
+function createButton(option, parent)
+	local main = library:Create("TextLabel", {
+		ZIndex = 2,
+		LayoutOrder = option.position,
+		Size = UDim2.new(1, 0, 0, 34),
+		BackgroundTransparency = 1,
+		Text = " " .. option.text,
+		TextSize = 17,
+		Font = Enum.Font.Gotham,
+		TextColor3 = Color3.fromRGB(255, 255, 255),
+		Parent = parent.content
+	})
+	
+	local round = library:Create("ImageLabel", {
+		AnchorPoint = Vector2.new(0.5, 0.5),
+		Position = UDim2.new(0.5, 0, 0.5, 0),
+		Size = UDim2.new(1, -12, 1, -10),
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageColor3 = Color3.fromRGB(255,255,255),
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.02,
+		Parent = main
+	})
+	local grade =  library:Create("UIGradient",{
+		Name = "line",
+		Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(46, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(228, 92, 255))},
+		Parent = round
+	})
+
+	local inContact
+	local clicking
+	main.InputBegan:connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			library.flags[option.flag] = true
+			clicking = true
+			tweenService:Create(round, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(255,255,255)}):Play()
+			option.callback()
+		end
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			inContact = true
+			tweenService:Create(round, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(178, 101, 255)}):Play()
+		end
+	end)
+	
+	main.InputEnded:connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			clicking = false
+			if inContact then
+				tweenService:Create(round, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(255,255,255)}):Play()
+			else
+				tweenService:Create(round, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(255,255,255)}):Play()
+			end
+		end
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			inContact = false
+			if not clicking then
+				tweenService:Create(round, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(255,255,255)}):Play()
+			end
+		end
+	end)
+end
+
+local function createBind(option, parent)
+	local binding
+	local holding
+	local loop
+	local text = string.match(option.key, "Mouse") and string.sub(option.key, 1, 5) .. string.sub(option.key, 12, 13) or option.key
+
+	local main = library:Create("TextLabel", {
+		LayoutOrder = option.position,
+		Size = UDim2.new(1, 0, 0, 33),
+		BackgroundTransparency = 1,
+		Text = " " .. option.text,
+		TextSize = 17,
+		Font = Enum.Font.Gotham,
+		TextColor3 = Color3.fromRGB(255, 255, 255),
+		TextXAlignment = Enum.TextXAlignment.Left,
+		Parent = parent.content
+	})
+	
+	local round = library:Create("ImageLabel", {
+		Position = UDim2.new(1, -6, 0, 4),
+		Size = UDim2.new(0, -textService:GetTextSize(text, 16, Enum.Font.Gotham, Vector2.new(9e9, 9e9)).X - 16, 1, -10),
+		SizeConstraint = Enum.SizeConstraint.RelativeYY,
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageColor3 = Color3.fromRGB(40, 40, 40),
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.02,
+		Parent = main
+	})
+	
+	local bindinput = library:Create("TextLabel", {
+		Size = UDim2.new(1, 0, 1, 0),
+		BackgroundTransparency = 1,
+		Text = text,
+		TextSize = 16,
+		Font = Enum.Font.Gotham,
+		TextColor3 = Color3.fromRGB(255, 255, 255),
+		Parent = round
+	})
+	
+	local inContact
+	main.InputBegan:connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			inContact = true
+			if not binding then
+				tweenService:Create(round, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(60, 60, 60)}):Play()
+			end
+		end
+	end)
+	 
+	main.InputEnded:connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			binding = true
+			bindinput.Text = "..."
+			tweenService:Create(round, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(255, 65, 65)}):Play()
+		end
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			inContact = false
+			if not binding then
+				tweenService:Create(round, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(40, 40, 40)}):Play()
+			end
+		end
+	end)
+	
+	inputService.InputBegan:connect(function(input)
+		if inputService:GetFocusedTextBox() then return end
+		if (input.KeyCode.Name == option.key or input.UserInputType.Name == option.key) and not binding then
+			if option.hold then
+				loop = runService.Heartbeat:connect(function()
+					if binding then
+						option.callback(true)
+						loop:Disconnect()
+						loop = nil
+					else
+						option.callback()
+					end
+				end)
+			else
+				option.callback()
+			end
+		elseif binding then
+			local key
+			pcall(function()
+				if not keyCheck(input.KeyCode, blacklistedKeys) then
+					key = input.KeyCode
+				end
+			end)
+			pcall(function()
+				if keyCheck(input.UserInputType, whitelistedMouseinputs) and not key then
+					key = input.UserInputType
+				end
+			end)
+			key = key or option.key
+			option:SetKey(key)
+		end
+	end)
+	
+	inputService.InputEnded:connect(function(input)
+		if input.KeyCode.Name == option.key or input.UserInputType.Name == option.key or input.UserInputType.Name == "MouseMovement" then
+			if loop then
+				loop:Disconnect()
+				loop = nil
+				option.callback(true)
+			end
+		end
+	end)
+	
+	function option:SetKey(key)
+		binding = false
+		if loop then
+			loop:Disconnect()
+			loop = nil
+		end
+		self.key = key or self.key
+		self.key = self.key.Name or self.key
+		library.flags[self.flag] = self.key
+		if string.match(self.key, "Mouse") then
+			bindinput.Text = string.sub(self.key, 1, 5) .. string.sub(self.key, 12, 13)
+		else
+			bindinput.Text = self.key
+		end
+		tweenService:Create(round, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = inContact and Color3.fromRGB(60, 60, 60) or Color3.fromRGB(40, 40, 40)}):Play()
+		round.Size = UDim2.new(0, -textService:GetTextSize(bindinput.Text, 15, Enum.Font.Gotham, Vector2.new(9e9, 9e9)).X - 16, 1, -10)	
+	end
+end
+
+local function createSlider(option, parent)
+	local main = library:Create("Frame", {
+		LayoutOrder = option.position,
+		Size = UDim2.new(1, 0, 0, 50),
+		BackgroundTransparency = 1,
+		Parent = parent.content
+	})
+	
+	local title = library:Create("TextLabel", {
+		Position = UDim2.new(0, 0, 0, 4),
+		Size = UDim2.new(1, 0, 0, 20),
+		BackgroundTransparency = 1,
+		Text = " " .. option.text,
+		TextSize = 17,
+		Font = Enum.Font.Gotham,
+		TextColor3 = Color3.fromRGB(255, 255, 255),
+		TextXAlignment = Enum.TextXAlignment.Left,
+		Parent = main
+	})
+	
+	local slider = library:Create("ImageLabel", {
+		Position = UDim2.new(0, 10, 0, 34),
+		Size = UDim2.new(1, -20, 0, 5),
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageColor3 = Color3.fromRGB(43, 43, 43),
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.02,
+		Parent = main
+	})
+	
+	local fill = library:Create("ImageLabel", {
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageColor3 = Color3.fromRGB(228, 92, 255),
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.02,
+		Parent = slider
+	})
+	
+	local circle = library:Create("ImageLabel", {
+		AnchorPoint = Vector2.new(0.5, 0.5),
+		Position = UDim2.new((option.value - option.min) / (option.max - option.min), 0, 0.5, 0),
+		SizeConstraint = Enum.SizeConstraint.RelativeYY,
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageColor3 = Color3.fromRGB(46, 255, 255),
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 1,
+		Parent = slider
+	})
+	
+	local valueRound = library:Create("ImageLabel", {
+		Position = UDim2.new(1, -6, 0, 4),
+		Size = UDim2.new(0, -60, 0, 18),
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageColor3 = Color3.fromRGB(40, 40, 40),
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.02,
+		Parent = main
+	})
+	
+	local inputvalue = library:Create("TextBox", {
+		Size = UDim2.new(1, 0, 1, 0),
+		BackgroundTransparency = 1,
+		Text = option.value,
+		TextColor3 = Color3.fromRGB(235, 235, 235),
+		TextSize = 15,
+		TextWrapped = true,
+		Font = Enum.Font.Gotham,
+		Parent = valueRound
+	})
+	
+	if option.min >= 0 then
+		fill.Size = UDim2.new((option.value - option.min) / (option.max - option.min), 0, 1, 0)
+	else
+		fill.Position = UDim2.new((0 - option.min) / (option.max - option.min), 0, 0, 0)
+		fill.Size = UDim2.new(option.value / (option.max - option.min), 0, 1, 0)
+	end
+	
+	local sliding
+	local inContact
+	main.InputBegan:connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			tweenService:Create(fill, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(228, 92, 255)}):Play()
+			tweenService:Create(circle, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(3.5, 0, 3.5, 0), ImageColor3 = Color3.fromRGB(46, 255, 255)}):Play()
+			sliding = true
+			option:SetValue(option.min + ((input.Position.X - slider.AbsolutePosition.X) / slider.AbsoluteSize.X) * (option.max - option.min))
+		end
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			inContact = true
+			if not sliding then
+				tweenService:Create(fill, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(228, 92, 255)}):Play()
+				tweenService:Create(circle, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(2.8, 0, 2.8, 0), ImageColor3 = Color3.fromRGB(46, 255, 255)}):Play()
+			end
+		end
+	end)
+	
+	inputService.InputChanged:connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement and sliding then
+			option:SetValue(option.min + ((input.Position.X - slider.AbsolutePosition.X) / slider.AbsoluteSize.X) * (option.max - option.min))
+		end
+	end)
+
+	main.InputEnded:connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			sliding = false
+			if inContact then
+				tweenService:Create(fill, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(228, 92, 255)}):Play()
+				tweenService:Create(circle, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(2.8, 0, 2.8, 0), ImageColor3 = Color3.fromRGB(46, 255, 255)}):Play()
+			else
+				tweenService:Create(fill, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(228, 92, 255)}):Play()
+				tweenService:Create(circle, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 0, 0), ImageColor3 = Color3.fromRGB(46, 255, 255)}):Play()
+			end
+		end
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			inContact = false
+			inputvalue:ReleaseFocus()
+			if not sliding then
+				tweenService:Create(fill, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(228, 92, 255)}):Play()
+				tweenService:Create(circle, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 0, 0), ImageColor3 = Color3.fromRGB(228, 92, 255)}):Play()
+			end
+		end
+	end)
+
+	inputvalue.FocusLost:connect(function()
+		tweenService:Create(circle, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 0, 0), ImageColor3 = Color3.fromRGB(60, 60, 60)}):Play()
+		option:SetValue(tonumber(inputvalue.Text) or option.value)
+	end)
+
+	function option:SetValue(value)
+		value = round(value, option.float)
+		value = math.clamp(value, self.min, self.max)
+		circle:TweenPosition(UDim2.new((value - self.min) / (self.max - self.min), 0, 0.5, 0), "Out", "Quad", 0.1, true)
+		if self.min >= 0 then
+			fill:TweenSize(UDim2.new((value - self.min) / (self.max - self.min), 0, 1, 0), "Out", "Quad", 0.1, true)
+		else
+			fill:TweenPosition(UDim2.new((0 - self.min) / (self.max - self.min), 0, 0, 0), "Out", "Quad", 0.1, true)
+			fill:TweenSize(UDim2.new(value / (self.max - self.min), 0, 1, 0), "Out", "Quad", 0.1, true)
+		end
+		library.flags[self.flag] = value
+		self.value = value
+		inputvalue.Text = value
+		self.callback(value)
+	end
+end
+
+local function createList(option, parent, holder)
+	local valueCount = 0
+	
+	local main = library:Create("Frame", {
+		LayoutOrder = option.position,
+		Size = UDim2.new(1, 0, 0, 52),
+		BackgroundTransparency = 1,
+		Parent = parent.content
+	})
+	
+	local round = library:Create("ImageLabel", {
+		Position = UDim2.new(0, 6, 0, 4),
+		Size = UDim2.new(1, -12, 1, -10),
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageColor3 = Color3.fromRGB(40, 40, 40),
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.02,
+		Parent = main
+	})
+	
+	local title = library:Create("TextLabel", {
+		Position = UDim2.new(0, 12, 0, 8),
+		Size = UDim2.new(1, -24, 0, 14),
+		BackgroundTransparency = 1,
+		Text = option.text,
+		TextSize = 14,
+		Font = Enum.Font.GothamBold,
+		TextColor3 = Color3.fromRGB(140, 140, 140),
+		TextXAlignment = Enum.TextXAlignment.Left,
+		Parent = main
+	})
+	
+	local listvalue = library:Create("TextLabel", {
+		Position = UDim2.new(0, 12, 0, 20),
+		Size = UDim2.new(1, -24, 0, 24),
+		BackgroundTransparency = 1,
+		Text = option.value,
+		TextSize = 18,
+		Font = Enum.Font.Gotham,
+		TextColor3 = Color3.fromRGB(255, 255, 255),
+		TextXAlignment = Enum.TextXAlignment.Left,
+		Parent = main
+	})
+	
+	library:Create("ImageLabel", {
+		Position = UDim2.new(1, -16, 0, 16),
+		Size = UDim2.new(-1, 32, 1, -32),
+		SizeConstraint = Enum.SizeConstraint.RelativeYY,
+		Rotation = 90,
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://4918373417",
+		ImageColor3 = Color3.fromRGB(140, 140, 140),
+		ScaleType = Enum.ScaleType.Fit,
+		Parent = round
+	})
+	
+	option.mainHolder = library:Create("ImageButton", {
+		ZIndex = 3,
+		Size = UDim2.new(0, 240, 0, 52),
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageTransparency = 1,
+		ImageColor3 = Color3.fromRGB(30, 30, 30),
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.02,
+		Visible = false,
+		Parent = library.base
+	})
+	
+	local content = library:Create("ScrollingFrame", {
+		ZIndex = 3,
+		Size = UDim2.new(1, 0, 1, 0),
+		BackgroundTransparency = 1,
+		BorderSizePixel = 0,
+		ScrollBarImageColor3 = Color3.fromRGB(),
+		ScrollBarThickness = 0,
+		ScrollingDirection = Enum.ScrollingDirection.Y,
+		Parent = option.mainHolder
+	})
+	
+	library:Create("UIPadding", {
+		PaddingTop = UDim.new(0, 6),
+		Parent = content
+	})
+	
+	local layout = library:Create("UIListLayout", {
+		Parent = content
+	})
+	
+	layout.Changed:connect(function()
+		option.mainHolder.Size = UDim2.new(0, 240, 0, (valueCount > 4 and (4 * 40) or layout.AbsoluteContentSize.Y) + 12)
+		content.CanvasSize = UDim2.new(0, 0, 0, layout.AbsoluteContentSize.Y + 12)
+	end)
+	
+	local inContact
+	round.InputBegan:connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			if library.activePopup then
+				library.activePopup:Close()
+			end
+			local position = main.AbsolutePosition
+			option.mainHolder.Position = UDim2.new(0, position.X - 5, 0, position.Y - 10)
+			option.open = true
+			option.mainHolder.Visible = true
+			library.activePopup = option
+			content.ScrollBarThickness = 6
+			tweenService:Create(option.mainHolder, TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = 0, Position = UDim2.new(0, position.X - 5, 0, position.Y - 4)}):Play()
+			tweenService:Create(option.mainHolder, TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0.1), {Position = UDim2.new(0, position.X - 5, 0, position.Y + 1)}):Play()
+			for _,label in next, content:GetChildren() do
+				if label:IsA"TextLabel" then
+					tweenService:Create(label, TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 0, TextTransparency = 0}):Play()
+				end
+			end
+		end
+	end)
+	
+	round.InputEnded:connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			inContact = false
+			if not option.open then
+				tweenService:Create(round, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(40, 40, 40)}):Play()
+			end
+		end
+	end)
+	
+	function option:AddValue(value)
+		valueCount = valueCount + 1
+		local label = library:Create("TextLabel", {
+			ZIndex = 3,
+			Size = UDim2.new(1, 0, 0, 40),
+			BackgroundColor3 = Color3.fromRGB(30, 30, 30),
+			BorderSizePixel = 0,
+			Text = "    " .. value,
+			TextSize = 14,
+			TextTransparency = self.open and 0 or 1,
+			Font = Enum.Font.Gotham,
+			TextColor3 = Color3.fromRGB(255, 255, 255),
+			TextXAlignment = Enum.TextXAlignment.Left,
+			Parent = content
+		})
+		
+		local inContact
+		local clicking
+		label.InputBegan:connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 then
+				clicking = true
+				tweenService:Create(label, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(10, 10, 10)}):Play()
+				self:SetValue(value)
+				library.activePopup:Close()
+			end
+			if input.UserInputType == Enum.UserInputType.MouseMovement then
+				inContact = true
+				if not clicking then
+					tweenService:Create(label, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(20, 20, 20)}):Play()
+				end
+			end
+		end)
+		
+		label.InputEnded:connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 then
+				clicking = false
+				tweenService:Create(label, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = inContact and Color3.fromRGB(20, 20, 20) or Color3.fromRGB(30, 30, 30)}):Play()
+			end
+			if input.UserInputType == Enum.UserInputType.MouseMovement then
+				inContact = false
+				if not clicking then
+					tweenService:Create(label, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(30, 30, 30)}):Play()
+				end
+			end
+		end)
+	end
+
+	if not table.find(option.values, option.value) then
+		option:AddValue(option.value)
+	end
+	
+	for _, value in next, option.values do
+		option:AddValue(tostring(value))
+	end
+	
+	function option:RemoveValue(value)
+		for _,label in next, content:GetChildren() do
+			if label:IsA"TextLabel" and label.Text == "	" .. value then
+				label:Destroy()
+				valueCount = valueCount - 1
+				break
+			end
+		end
+		if self.value == value then
+			self:SetValue("")
+		end
+	end
+	function option:RemoveAll(value)
+		for _,label in next, content:GetChildren() do
+			if label:IsA"TextLabel"  then
+				label:Destroy()
+				valueCount = valueCount - 1
+			end
+		end
+		if self.value == value then
+			self:SetValue("")
+		end
+	end
+	function option:SetValue(value)
+		library.flags[self.flag] = tostring(value)
+		self.value = tostring(value)
+		listvalue.Text = self.value
+		self.callback(value)
+	end
+	
+	function option:Close()
+		library.activePopup = nil
+		self.open = false
+		content.ScrollBarThickness = 0
+		local position = main.AbsolutePosition
+		tweenService:Create(round, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = inContact and Color3.fromRGB(60, 60, 60) or Color3.fromRGB(40, 40, 40)}):Play()
+		tweenService:Create(self.mainHolder, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageTransparency = 1, Position = UDim2.new(0, position.X - 5, 0, position.Y -10)}):Play()
+		for _,label in next, content:GetChildren() do
+			if label:IsA"TextLabel" then
+				tweenService:Create(label, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 1, TextTransparency = 1}):Play()
+			end
+		end
+		wait(0.3)
+		--delay(0.3, function()
+			if not self.open then
+				self.mainHolder.Visible = false
+			end
+		--end)
+	end
+
+	return option
+end
+
+local function createBox(option, parent)
+	local main = library:Create("Frame", {
+		LayoutOrder = option.position,
+		Size = UDim2.new(1, 0, 0, 52),
+		BackgroundTransparency = 1,
+		Parent = parent.content
+	})
+	
+	local outline = library:Create("ImageLabel", {
+		Position = UDim2.new(0, 6, 0, 4),
+		Size = UDim2.new(1, -12, 1, -10),
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageColor3 = Color3.fromRGB(60, 60, 60),
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.02,
+		Parent = main
+	})
+	
+	local round = library:Create("ImageLabel", {
+		Position = UDim2.new(0, 8, 0, 6),
+		Size = UDim2.new(1, -16, 1, -14),
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageColor3 = Color3.fromRGB(20, 20, 20),
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.01,
+		Parent = main
+	})
+	
+	local title = library:Create("TextLabel", {
+		Position = UDim2.new(0, 12, 0, 8),
+		Size = UDim2.new(1, -24, 0, 14),
+		BackgroundTransparency = 1,
+		Text = option.text,
+		TextSize = 14,
+		Font = Enum.Font.GothamBold,
+		TextColor3 = Color3.fromRGB(100, 100, 100),
+		TextXAlignment = Enum.TextXAlignment.Left,
+		Parent = main
+	})
+	
+	local inputvalue = library:Create("TextBox", {
+		Position = UDim2.new(0, 12, 0, 20),
+		Size = UDim2.new(1, -24, 0, 24),
+		BackgroundTransparency = 1,
+		Text = option.value,
+		TextSize = 18,
+		Font = Enum.Font.Gotham,
+		TextColor3 = Color3.fromRGB(255, 255, 255),
+		TextXAlignment = Enum.TextXAlignment.Left,
+		TextWrapped = true,
+		Parent = main
+	})
+	
+	local inContact
+	local focused
+	main.InputBegan:connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			if not focused then inputvalue:CaptureFocus() end
+		end
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			inContact = true
+			if not focused then
+				tweenService:Create(outline, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(100, 100, 100)}):Play()
+			end
+		end
+	end)
+	
+	main.InputEnded:connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			inContact = false
+			if not focused then
+				tweenService:Create(outline, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(60, 60, 60)}):Play()
+			end
+		end
+	end)
+	
+	inputvalue.Focused:connect(function()
+		focused = true
+		tweenService:Create(outline, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(255, 65, 65)}):Play()
+	end)
+	
+	inputvalue.FocusLost:connect(function(enter)
+		focused = false
+		tweenService:Create(outline, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(60, 60, 60)}):Play()
+		option:SetValue(inputvalue.Text, enter)
+	end)
+	
+	function option:SetValue(value, enter)
+		library.flags[self.flag] = tostring(value)
+		self.value = tostring(value)
+		inputvalue.Text = self.value
+		self.callback(value, enter)
+	end
+end
+
+local function createColorPickerWindow(option)
+	option.mainHolder = library:Create("ImageButton", {
+		ZIndex = 3,
+		Size = UDim2.new(0, 240, 0, 180),
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageTransparency = 1,
+		ImageColor3 = Color3.fromRGB(30, 30, 30),
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.02,
+		Parent = library.base
+	})
+		
+	local hue, sat, val = Color3.toHSV(option.color)
+	hue, sat, val = hue == 0 and 1 or hue, sat + 0.005, val - 0.005
+	local editinghue
+	local editingsatval
+	local currentColor = option.color
+	local previousColors = {[1] = option.color}
+	local originalColor = option.color
+	local rainbowEnabled
+	local rainbowLoop
+	
+	function option:updateVisuals(Color)
+		currentColor = Color
+		self.visualize2.ImageColor3 = Color
+		hue, sat, val = Color3.toHSV(Color)
+		hue = hue == 0 and 1 or hue
+		self.satval.BackgroundColor3 = Color3.fromHSV(hue, 1, 1)
+		self.hueSlider.Position = UDim2.new(1 - hue, 0, 0, 0)
+		self.satvalSlider.Position = UDim2.new(sat, 0, 1 - val, 0)
+	end
+	
+	option.hue = library:Create("ImageLabel", {
+		ZIndex = 3,
+		AnchorPoint = Vector2.new(0, 1),
+		Position = UDim2.new(0, 8, 1, -8),
+		Size = UDim2.new(1, -100, 0, 22),
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageTransparency = 1,
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.02,
+		Parent = option.mainHolder
+	})
+	
+	local Gradient = library:Create("UIGradient", {
+		Color = ColorSequence.new({
+			ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)),
+			ColorSequenceKeypoint.new(0.157, Color3.fromRGB(255, 0, 255)),
+			ColorSequenceKeypoint.new(0.323, Color3.fromRGB(0, 0, 255)),
+			ColorSequenceKeypoint.new(0.488, Color3.fromRGB(0, 255, 255)),
+			ColorSequenceKeypoint.new(0.66, Color3.fromRGB(0, 255, 0)),
+			ColorSequenceKeypoint.new(0.817, Color3.fromRGB(255, 255, 0)),
+			ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 0, 0)),
+		}),
+		Parent = option.hue
+	})
+	
+	option.hueSlider = library:Create("Frame", {
+		ZIndex = 3,
+		Position = UDim2.new(1 - hue, 0, 0, 0),
+		Size = UDim2.new(0, 2, 1, 0),
+		BackgroundTransparency = 1,
+		BackgroundColor3 = Color3.fromRGB(30, 30, 30),
+		BorderColor3 = Color3.fromRGB(255, 255, 255),
+		Parent = option.hue
+	})
+	
+	option.hue.InputBegan:connect(function(Input)
+		if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+			editinghue = true
+			X = (option.hue.AbsolutePosition.X + option.hue.AbsoluteSize.X) - option.hue.AbsolutePosition.X
+			X = (Input.Position.X - option.hue.AbsolutePosition.X) / X
+			X = X < 0 and 0 or X > 0.995 and 0.995 or X
+			option:updateVisuals(Color3.fromHSV(1 - X, sat, val))
+		end
+	end)
+	
+	inputService.InputChanged:connect(function(Input)
+		if Input.UserInputType == Enum.UserInputType.MouseMovement and editinghue then
+			X = (option.hue.AbsolutePosition.X + option.hue.AbsoluteSize.X) - option.hue.AbsolutePosition.X
+			X = (Input.Position.X - option.hue.AbsolutePosition.X) / X
+			X = X <= 0 and 0 or X >= 0.995 and 0.995 or X
+			option:updateVisuals(Color3.fromHSV(1 - X, sat, val))
+		end
+	end)
+	
+	option.hue.InputEnded:connect(function(Input)
+		if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+			editinghue = false
+		end
+	end)
+	
+	option.satval = library:Create("ImageLabel", {
+		ZIndex = 3,
+		Position = UDim2.new(0, 8, 0, 8),
+		Size = UDim2.new(1, -100, 1, -42),
+		BackgroundTransparency = 1,
+		BackgroundColor3 = Color3.fromHSV(hue, 1, 1),
+		BorderSizePixel = 0,
+		Image = "rbxassetid://4155801252",
+		ImageTransparency = 1,
+		ClipsDescendants = true,
+		Parent = option.mainHolder
+	})
+	
+	option.satvalSlider = library:Create("Frame", {
+		ZIndex = 3,
+		AnchorPoint = Vector2.new(0.5, 0.5),
+		Position = UDim2.new(sat, 0, 1 - val, 0),
+		Size = UDim2.new(0, 4, 0, 4),
+		Rotation = 45,
+		BackgroundTransparency = 1,
+		BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+		Parent = option.satval
+	})
+	
+	option.satval.InputBegan:connect(function(Input)
+		if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+			editingsatval = true
+			X = (option.satval.AbsolutePosition.X + option.satval.AbsoluteSize.X) - option.satval.AbsolutePosition.X
+			Y = (option.satval.AbsolutePosition.Y + option.satval.AbsoluteSize.Y) - option.satval.AbsolutePosition.Y
+			X = (Input.Position.X - option.satval.AbsolutePosition.X) / X
+			Y = (Input.Position.Y - option.satval.AbsolutePosition.Y) / Y
+			X = X <= 0.005 and 0.005 or X >= 1 and 1 or X
+			Y = Y <= 0 and 0 or Y >= 0.995 and 0.995 or Y
+			option:updateVisuals(Color3.fromHSV(hue, X, 1 - Y))
+		end
+	end)
+	
+	inputService.InputChanged:connect(function(Input)
+		if Input.UserInputType == Enum.UserInputType.MouseMovement and editingsatval then
+			X = (option.satval.AbsolutePosition.X + option.satval.AbsoluteSize.X) - option.satval.AbsolutePosition.X
+			Y = (option.satval.AbsolutePosition.Y + option.satval.AbsoluteSize.Y) - option.satval.AbsolutePosition.Y
+			X = (Input.Position.X - option.satval.AbsolutePosition.X) / X
+			Y = (Input.Position.Y - option.satval.AbsolutePosition.Y) / Y
+			X = X <= 0.005 and 0.005 or X >= 1 and 1 or X
+			Y = Y <= 0 and 0 or Y >= 0.995 and 0.995 or Y
+			option:updateVisuals(Color3.fromHSV(hue, X, 1 - Y))
+		end
+	end)
+	
+	option.satval.InputEnded:connect(function(Input)
+		if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+			editingsatval = false
+		end
+	end)
+	
+	option.visualize2 = library:Create("ImageLabel", {
+		ZIndex = 3,
+		Position = UDim2.new(1, -8, 0, 8),
+		Size = UDim2.new(0, -80, 0, 80),
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageColor3 = currentColor,
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.02,
+		Parent = option.mainHolder
+	})
+	
+	option.resetColor = library:Create("ImageLabel", {
+		ZIndex = 3,
+		Position = UDim2.new(1, -8, 0, 92),
+		Size = UDim2.new(0, -80, 0, 18),
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageTransparency = 1,
+		ImageColor3 = Color3.fromRGB(20, 20, 20),
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.02,
+		Parent = option.mainHolder
+	})
+	
+	option.resetText = library:Create("TextLabel", {
+		ZIndex = 3,
+		Size = UDim2.new(1, 0, 1, 0),
+		BackgroundTransparency = 1,
+		Text = "Reset",
+		TextTransparency = 1,
+		Font = Enum.Font.Code,
+		TextSize = 15,
+		TextColor3 = Color3.fromRGB(255, 255, 255),
+		Parent = option.resetColor
+	})
+	
+	option.resetColor.InputBegan:connect(function(Input)
+		if Input.UserInputType == Enum.UserInputType.MouseButton1 and not rainbowEnabled then
+			previousColors = {originalColor}
+			option:SetColor(originalColor)
+		end
+		if Input.UserInputType == Enum.UserInputType.MouseMovement and not dragging then
+			tweenService:Create(option.resetColor, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(10, 10, 10)}):Play()
+		end
+	end)
+	
+	option.resetColor.InputEnded:connect(function(Input)
+		if Input.UserInputType == Enum.UserInputType.MouseMovement and not dragging then
+			tweenService:Create(option.resetColor, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(20, 20, 20)}):Play()
+		end
+	end)
+	
+	option.undoColor = library:Create("ImageLabel", {
+		ZIndex = 3,
+		Position = UDim2.new(1, -8, 0, 112),
+		Size = UDim2.new(0, -80, 0, 18),
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageTransparency = 1,
+		ImageColor3 = Color3.fromRGB(20, 20, 20),
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.02,
+		Parent = option.mainHolder
+	})
+	
+	option.undoText = library:Create("TextLabel", {
+		ZIndex = 3,
+		Size = UDim2.new(1, 0, 1, 0),
+		BackgroundTransparency = 1,
+		Text = "Undo",
+		TextTransparency = 1,
+		Font = Enum.Font.Code,
+		TextSize = 15,
+		TextColor3 = Color3.fromRGB(255, 255, 255),
+		Parent = option.undoColor
+	})
+	
+	option.undoColor.InputBegan:connect(function(Input)
+		if Input.UserInputType == Enum.UserInputType.MouseButton1 and not rainbowEnabled then
+			local Num = #previousColors == 1 and 0 or 1
+			option:SetColor(previousColors[#previousColors - Num])
+			if #previousColors ~= 1 then
+				table.remove(previousColors, #previousColors)
+			end
+		end
+		if Input.UserInputType == Enum.UserInputType.MouseMovement and not dragging then
+			tweenService:Create(option.undoColor, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(10, 10, 10)}):Play()
+		end
+	end)
+	
+	option.undoColor.InputEnded:connect(function(Input)
+		if Input.UserInputType == Enum.UserInputType.MouseMovement and not dragging then
+			tweenService:Create(option.undoColor, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(20, 20, 20)}):Play()
+		end
+	end)
+	
+	option.setColor = library:Create("ImageLabel", {
+		ZIndex = 3,
+		Position = UDim2.new(1, -8, 0, 132),
+		Size = UDim2.new(0, -80, 0, 18),
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageTransparency = 1,
+		ImageColor3 = Color3.fromRGB(20, 20, 20),
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.02,
+		Parent = option.mainHolder
+	})
+	
+	option.setText = library:Create("TextLabel", {
+		ZIndex = 3,
+		Size = UDim2.new(1, 0, 1, 0),
+		BackgroundTransparency = 1,
+		Text = "Set",
+		TextTransparency = 1,
+		Font = Enum.Font.Code,
+		TextSize = 15,
+		TextColor3 = Color3.fromRGB(255, 255, 255),
+		Parent = option.setColor
+	})
+	
+	option.setColor.InputBegan:connect(function(Input)
+		if Input.UserInputType == Enum.UserInputType.MouseButton1 and not rainbowEnabled then
+			table.insert(previousColors, currentColor)
+			option:SetColor(currentColor)
+		end
+		if Input.UserInputType == Enum.UserInputType.MouseMovement and not dragging then
+			tweenService:Create(option.setColor, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(10, 10, 10)}):Play()
+		end
+	end)
+	
+	option.setColor.InputEnded:connect(function(Input)
+		if Input.UserInputType == Enum.UserInputType.MouseMovement and not dragging then
+			tweenService:Create(option.setColor, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(20, 20, 20)}):Play()
+		end
+	end)
+	
+	option.rainbow = library:Create("ImageLabel", {
+		ZIndex = 3,
+		Position = UDim2.new(1, -8, 0, 152),
+		Size = UDim2.new(0, -80, 0, 18),
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageTransparency = 1,
+		ImageColor3 = Color3.fromRGB(20, 20, 20),
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.02,
+		Parent = option.mainHolder
+	})
+	
+	option.rainbowText = library:Create("TextLabel", {
+		ZIndex = 3,
+		Size = UDim2.new(1, 0, 1, 0),
+		BackgroundTransparency = 1,
+		Text = "Rainbow",
+		TextTransparency = 1,
+		Font = Enum.Font.Code,
+		TextSize = 15,
+		TextColor3 = Color3.fromRGB(255, 255, 255),
+		Parent = option.rainbow
+	})
+	
+	option.rainbow.InputBegan:connect(function(Input)
+		if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+			rainbowEnabled = not rainbowEnabled
+			if rainbowEnabled then
+				rainbowLoop = runService.Heartbeat:connect(function()
+					option:SetColor(chromaColor)
+					option.rainbowText.TextColor3 = chromaColor
+				end)
+			else
+				rainbowLoop:Disconnect()
+				option:SetColor(previousColors[#previousColors])
+				option.rainbowText.TextColor3 = Color3.fromRGB(255, 255, 255)
+			end
+		end
+		if Input.UserInputType == Enum.UserInputType.MouseMovement and not dragging then
+			tweenService:Create(option.rainbow, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(10, 10, 10)}):Play()
+		end
+	end)
+	
+	option.rainbow.InputEnded:connect(function(Input)
+		if Input.UserInputType == Enum.UserInputType.MouseMovement and not dragging then
+			tweenService:Create(option.rainbow, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(20, 20, 20)}):Play()
+		end
+	end)
+	
+	return option
+end
+
+local function createColor(option, parent, holder)
+	option.main = library:Create("TextLabel", {
+		LayoutOrder = option.position,
+		Size = UDim2.new(1, 0, 0, 31),
+		BackgroundTransparency = 1,
+		Text = " " .. option.text,
+		TextSize = 17,
+		Font = Enum.Font.Gotham,
+		TextColor3 = Color3.fromRGB(255, 255, 255),
+		TextXAlignment = Enum.TextXAlignment.Left,
+		Parent = parent.content
+	})
+	
+	local colorBoxOutline = library:Create("ImageLabel", {
+		Position = UDim2.new(1, -6, 0, 4),
+		Size = UDim2.new(-1, 10, 1, -10),
+		SizeConstraint = Enum.SizeConstraint.RelativeYY,
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageColor3 = Color3.fromRGB(100, 100, 100),
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.02,
+		Parent = option.main
+	})
+	
+	option.visualize = library:Create("ImageLabel", {
+		Position = UDim2.new(0, 2, 0, 2),
+		Size = UDim2.new(1, -4, 1, -4),
+		BackgroundTransparency = 1,
+		Image = "rbxassetid://3570695787",
+		ImageColor3 = option.color,
+		ScaleType = Enum.ScaleType.Slice,
+		SliceCenter = Rect.new(100, 100, 100, 100),
+		SliceScale = 0.02,
+		Parent = colorBoxOutline
+	})
+	
+	local inContact
+	option.main.InputBegan:connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			if not option.mainHolder then createColorPickerWindow(option) end
+			if library.activePopup then
+				library.activePopup:Close()
+			end
+			local position = option.main.AbsolutePosition
+			option.mainHolder.Position = UDim2.new(0, position.X - 5, 0, position.Y - 10)
+			option.open = true
+			option.mainHolder.Visible = true
+			library.activePopup = option
+			tweenService:Create(option.mainHolder, TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = 0, Position = UDim2.new(0, position.X - 5, 0, position.Y - 4)}):Play()
+			tweenService:Create(option.mainHolder, TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0.1), {Position = UDim2.new(0, position.X - 5, 0, position.Y + 1)}):Play()
+			tweenService:Create(option.satval, TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundTransparency = 0}):Play()
+			for _,object in next, option.mainHolder:GetDescendants() do
+				if object:IsA"TextLabel" then
+					tweenService:Create(object, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency = 0}):Play()
+				elseif object:IsA"ImageLabel" then
+					tweenService:Create(object, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageTransparency = 0}):Play()
+				elseif object:IsA"Frame" then
+					tweenService:Create(object, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 0}):Play()
+				end
+			end
+		end
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			inContact = true
+			if not option.open then
+				tweenService:Create(colorBoxOutline, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(140, 140, 140)}):Play()
+			end
+		end
+	end)
+	
+	option.main.InputEnded:connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			inContact = true
+			if not option.open then
+				tweenService:Create(colorBoxOutline, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(100, 100, 100)}):Play()
+			end
+		end
+	end)
+	
+	function option:SetColor(newColor)
+		if self.mainHolder then
+			self:updateVisuals(newColor)
+		end
+		self.visualize.ImageColor3 = newColor
+		library.flags[self.flag] = newColor
+		self.color = newColor
+		self.callback(newColor)
+	end
+	
+	function option:Close()
+		library.activePopup = nil
+		self.open = false
+		local position = self.main.AbsolutePosition
+		tweenService:Create(self.mainHolder, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageTransparency = 1, Position = UDim2.new(0, position.X - 5, 0, position.Y - 10)}):Play()
+		tweenService:Create(self.satval, TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
+		for _,object in next, self.mainHolder:GetDescendants() do
+			if object:IsA"TextLabel" then
+				tweenService:Create(object, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency = 1}):Play()
+			elseif object:IsA"ImageLabel" then
+				tweenService:Create(object, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageTransparency = 1}):Play()
+			elseif object:IsA"Frame" then
+				tweenService:Create(object, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
+			end
+		end
+		delay(0.3, function()
+			if not self.open then
+				self.mainHolder.Visible = false
+			end 
+		end)
+	end
+end
+
+local function loadOptions(option, holder)
+	for _,newOption in next, option.options do
+		if newOption.type == "label" then
+			createLabel(newOption, option)
+		elseif newOption.type == "toggle" then
+			createToggle(newOption, option)
+		elseif newOption.type == "button" then
+			createButton(newOption, option)
+		elseif newOption.type == "list" then
+			createList(newOption, option, holder)
+		elseif newOption.type == "box" then
+			createBox(newOption, option)
+		elseif newOption.type == "bind" then
+			createBind(newOption, option)
+		elseif newOption.type == "slider" then
+			createSlider(newOption, option)
+		elseif newOption.type == "color" then
+			createColor(newOption, option, holder)
+		elseif newOption.type == "folder" then
+			newOption:init()
+		end
+	end
+end
+
+local function getFnctions(parent)
+	function parent:AddLabel(option)
+		option = typeof(option) == "table" and option or {}
+		option.text = tostring(option.text)
+		option.type = "label"
+		option.position = #self.options
+		table.insert(self.options, option)
+		
+		return option
+	end
+	
+	function parent:AddToggle(option)
+		option = typeof(option) == "table" and option or {}
+		option.text = tostring(option.text)
+		option.state = typeof(option.state) == "boolean" and option.state or false
+		option.callback = typeof(option.callback) == "function" and option.callback or function() end
+		option.type = "toggle"
+		option.position = #self.options
+		option.flag = option.flag or option.text
+		library.flags[option.flag] = option.state
+		table.insert(self.options, option)
+		
+		return option
+	end
+	
+	function parent:AddButton(option)
+		option = typeof(option) == "table" and option or {}
+		option.text = tostring(option.text)
+		option.callback = typeof(option.callback) == "function" and option.callback or function() end
+		option.type = "button"
+		option.position = #self.options
+		option.flag = option.flag or option.text
+		table.insert(self.options, option)
+		
+		return option
+	end
+	
+	function parent:AddBind(option)
+		option = typeof(option) == "table" and option or {}
+		option.text = tostring(option.text)
+		option.key = (option.key and option.key.Name) or option.key or "F"
+		option.hold = typeof(option.hold) == "boolean" and option.hold or false
+		option.callback = typeof(option.callback) == "function" and option.callback or function() end
+		option.type = "bind"
+		option.position = #self.options
+		option.flag = option.flag or option.text
+		library.flags[option.flag] = option.key
+		table.insert(self.options, option)
+		
+		return option
+	end
+	
+	function parent:AddSlider(option)
+		option = typeof(option) == "table" and option or {}
+		option.text = tostring(option.text)
+		option.min = typeof(option.min) == "number" and option.min or 0
+		option.max = typeof(option.max) == "number" and option.max or 0
+		option.dual = typeof(option.dual) == "boolean" and option.dual or false
+		option.value = math.clamp(typeof(option.value) == "number" and option.value or option.min, option.min, option.max)
+		option.value2 = typeof(option.value2) == "number" and option.value2 or option.max
+		option.callback = typeof(option.callback) == "function" and option.callback or function() end
+		option.float = typeof(option.value) == "number" and option.float or 1
+		option.type = "slider"
+		option.position = #self.options
+		option.flag = option.flag or option.text
+		library.flags[option.flag] = option.value
+		table.insert(self.options, option)
+		
+		return option
+	end
+	
+	function parent:AddList(option)
+		option = typeof(option) == "table" and option or {}
+		option.text = tostring(option.text)
+		option.values = typeof(option.values) == "table" and option.values or {}
+		option.value = tostring(option.value or option.values[1] or "")
+		option.callback = typeof(option.callback) == "function" and option.callback or function() end
+		option.open = false
+		option.type = "list"
+		option.position = #self.options
+		option.flag = option.flag or option.text
+		library.flags[option.flag] = option.value
+		table.insert(self.options, option)
+		
+		return option
+	end
+	
+	function parent:AddBox(option)
+		option = typeof(option) == "table" and option or {}
+		option.text = tostring(option.text)
+		option.value = tostring(option.value or "")
+		option.callback = typeof(option.callback) == "function" and option.callback or function() end
+		option.type = "box"
+		option.position = #self.options
+		option.flag = option.flag or option.text
+		library.flags[option.flag] = option.value
+		table.insert(self.options, option)
+		
+		return option
+	end
+	
+	function parent:AddColor(option)
+		option = typeof(option) == "table" and option or {}
+		option.text = tostring(option.text)
+		option.color = typeof(option.color) == "table" and Color3.new(tonumber(option.color[1]), tonumber(option.color[2]), tonumber(option.color[3])) or option.color or Color3.new(255, 255, 255)
+		option.callback = typeof(option.callback) == "function" and option.callback or function() end
+		option.open = false
+		option.type = "color"
+		option.position = #self.options
+		option.flag = option.flag or option.text
+		library.flags[option.flag] = option.color
+		table.insert(self.options, option)
+		
+		return option
+	end
+	
+	function parent:AddFolder(title)
+		local option = {}
+		option.title = tostring(title)
+		option.options = {}
+		option.open = false
+		option.type = "folder"
+		option.position = #self.options
+		table.insert(self.options, option)
+		
+		getFnctions(option)
+		
+		function option:init()
+			createOptionHolder(self.title, parent.content, self, true)
+			loadOptions(self, parent)
+		end
+		
+		return option
+	end
+end
+
+function library:CreateWindow(title)
+	local window = {title = tostring(title), options = {}, open = true, canInit = true, init = false, position = #self.windows}
+	getFnctions(window)
+	
+	table.insert(library.windows, window)
+	
+	return window
+end
+
+local UIToggle
+local UnlockMouse
+function library:Init()
+	
+	self.base = self.base or self:Create("ScreenGui")
+	if syn and syn.protect_gui then
+		syn.protect_gui(self.base)
+	elseif get_hidden_gui then
+		get_hidden_gui(self.base)		
+	end
+	self.base.Parent = game:GetService"CoreGui"
+	
+	for _, window in next, self.windows do
+		if window.canInit and not window.init then
+			window.init = true
+			createOptionHolder(window.title, self.base, window)
+			loadOptions(window)
+		end
+	end
+end
+
+function library:Close()
+	self.open = not self.open
+	if self.activePopup then
+		self.activePopup:Close()
+	end
+	for _, window in next, self.windows do
+		if window.main then
+			window.main.Visible = self.open
+		end
+	end
+end
+
+inputService.InputBegan:connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then
+		if library.activePopup then
+			if input.Position.X < library.activePopup.mainHolder.AbsolutePosition.X or input.Position.Y < library.activePopup.mainHolder.AbsolutePosition.Y then
+				library.activePopup:Close()
+			end
+		end
+		if library.activePopup then
+			if input.Position.X > library.activePopup.mainHolder.AbsolutePosition.X + library.activePopup.mainHolder.AbsoluteSize.X or input.Position.Y > library.activePopup.mainHolder.AbsolutePosition.Y + library.activePopup.mainHolder.AbsoluteSize.Y then
+				library.activePopup:Close()
+			end
+		end
+	end
+end)
+inputService.InputChanged:connect(function(input)
+	if input == dragInput and dragging then
+		update(input)
+	end
+end)
+
+return library
